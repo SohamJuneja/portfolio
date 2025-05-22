@@ -1,0 +1,79 @@
+.continue-watching-row {
+  padding: 20px;
+  color: #fff;
+}
+
+.continue-watching-row:hover {
+ cursor: pointer;
+}
+
+.row-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+.card-row {
+  display: flex;
+  gap: 10px;
+  padding-bottom: 10px;
+  scrollbar-width: none; /* For Firefox */
+}
+
+.card-row::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Edge */
+}
+
+.pick-card {
+  position: relative;
+  min-width: 320px;
+  height: 260px;
+  flex: 0 0 auto;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.pick-card:hover {
+  transform: scale(1.1); /* Increased scale on hover */
+  cursor: pointer;
+  z-index: 10; /* Bring hovered card to front */
+}
+
+.pick-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.7) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 10px;
+  opacity: 1;
+  transition: background 0.3s ease;
+}
+
+.pick-card:hover .overlay {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%);
+}
+
+.pick-label {
+  position: static;
+  transform: none;
+  color: #fff;
+  font-size: 1.7rem;
+  font-weight: bold;
+  text-align: left;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  font-family: 'Bebas Neue', sans-serif;
+} 

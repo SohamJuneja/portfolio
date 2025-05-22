@@ -1,0 +1,47 @@
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  background: none;
+  padding: 0.5rem 0.5rem 0 0.5rem;
+}
+
+.profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  background: #222;
+  border: 2px solid transparent;
+  transition: all 0.2s ease-out;
+  display: block;
+  box-sizing: border-box;
+  transform-origin: center;
+}
+
+.profile-card:hover .profile-image {
+  border: 2px solid #fff;
+  transform: scale(1.05);
+}
+
+.profile-name {
+  color: #b3b3b3;
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 0;
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-weight: 400;
+  margin-top: 0.5rem;
+  transition: color 0.2s ease-out;
+}
+
+.profile-card:hover .profile-name {
+  color: #fff;
+}
+
+/* Remove the shrinking animation and replace with a subtle glow effect */
+.profile-card:active .profile-image {
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+  transition: box-shadow 0.1s ease-out;
+} 

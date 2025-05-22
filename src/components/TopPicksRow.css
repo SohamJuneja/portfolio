@@ -1,0 +1,128 @@
+.top-picks-row {
+  margin: 20px 0;
+  padding: 10px 20px;
+}
+
+.row-title {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.card-row {
+  display: flex;
+  gap: 15px;
+  padding-bottom: 10px; /* Add padding for scrollbar */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  overflow-y: hidden; /* Prevent vertical scrolling */
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: #e50914 #141414; /* For Firefox */
+  -ms-overflow-style: none; /* For IE and Edge */
+  scroll-behavior: smooth; /* Smooth scrolling */
+  max-width: 100%; /* Ensure it doesn't overflow the container */
+  position: relative; /* For proper stacking context */
+}
+
+.card-row::-webkit-scrollbar {
+  height: 8px; /* Height of horizontal scrollbar */
+}
+
+.card-row::-webkit-scrollbar-track {
+  background: #141414; /* Dark background */
+  border-radius: 4px;
+}
+
+.card-row::-webkit-scrollbar-thumb {
+  background: #e50914; /* Netflix red */
+  border-radius: 4px;
+}
+
+.card-row::-webkit-scrollbar-thumb:hover {
+  background: #f40612; /* Lighter red on hover */
+}
+
+.pick-card {
+  position: relative;
+  width: 200px; /* Reverted to original width */
+  height: 120px; /* Reverted to original height */
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: slideIn 0.5s ease forwards;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.pick-card:hover {
+  transform: scale(1.1); /* Reverted to original scale */
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(255, 0, 0, 0.7);
+  z-index: 10;
+}
+
+.pick-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure image covers the card */
+  transition: transform 0.3s ease;
+}
+
+.pick-card:hover .pick-image {
+  transform: scale(1.05); /* Subtle image zoom on hover */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.7) 100%); /* Gradient overlay */
+  display: flex;
+  flex-direction: column; /* Stack title and potentially other info */
+  justify-content: flex-end; /* Align content to the bottom */
+  align-items: flex-start; /* Align content to the left */
+  padding: 15px; /* Add padding inside the overlay */
+  opacity: 1; /* Keep overlay visible */
+  transition: background 0.3s ease; /* Smooth transition for background change */
+}
+
+.pick-card:hover .overlay {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%); /* Darker gradient on hover */
+}
+
+.pick-label {
+  position: static;
+  transform: none;
+  color: #fff;
+  font-size: 1.2rem; /* Reverted to original font size */
+  font-weight: bold;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  margin-bottom: 5px;
+  font-family: 'Bebas Neue', sans-serif;
+  text-align: left;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+} 

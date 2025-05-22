@@ -1,0 +1,338 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;500;700&display=swap");
+@import url("https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css");
+
+:root {
+  --netflix-red: #e50914;
+  --netflix-black: #000000;
+  --netflix-dark-gray: #141414;
+  --netflix-light-gray: #808080;
+  --netflix-white: #ffffff;
+}
+
+.skills-container {
+  background-color: var(--netflix-black);
+  min-height: 100vh;
+  padding: 40px 20px;
+  padding-top: 120px;
+  color: var(--netflix-white);
+  font-family: "Roboto", sans-serif;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9) 0%, rgba(20, 20, 20, 1) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.skills-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
+  z-index: 1;
+}
+
+.netflix-header {
+  text-align: center;
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.netflix-header h1 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 5rem;
+  color: var(--netflix-red);
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  text-shadow: 3px 3px 10px rgba(229, 9, 20, 0.3);
+  position: relative;
+  display: inline-block;
+}
+
+.netflix-header h1::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 4px;
+  background-color: var(--netflix-red);
+  border-radius: 2px;
+}
+
+.netflix-header p {
+  font-size: 1.2rem;
+  color: var(--netflix-light-gray);
+}
+
+.category-row {
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.category-title {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  font-weight: 500;
+  color: var(--netflix-white);
+  padding-left: 20px;
+  position: relative;
+}
+
+.category-title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 5px;
+  height: 80%;
+  background-color: var(--netflix-red);
+  border-radius: 2px;
+}
+
+.skills-row {
+  display: flex;
+  overflow-x: auto;
+  padding: 20px 10px;
+  gap: 15px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--netflix-red) var(--netflix-dark-gray);
+  position: relative;
+}
+
+.skills-row::-webkit-scrollbar {
+  height: 8px;
+}
+
+.skills-row::-webkit-scrollbar-track {
+  background: var(--netflix-dark-gray);
+  border-radius: 4px;
+}
+
+.skills-row::-webkit-scrollbar-thumb {
+  background-color: var(--netflix-red);
+  border-radius: 4px;
+}
+
+.skill-card {
+  flex: 0 0 auto;
+  width: 180px;
+  height: 120px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  perspective: 1000px;
+  position: relative;
+}
+
+.skill-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--netflix-dark-gray);
+  border-radius: 4px;
+  padding: 15px;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-content::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: var(--netflix-red);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.skill-content:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(229, 9, 20, 0.2);
+}
+
+.skill-content:hover::after {
+  transform: scaleX(1);
+}
+
+.skill-icon {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+  color: var(--netflix-white);
+}
+
+.skill-content:hover .skill-icon {
+  color: var(--netflix-red);
+  transform: scale(1.1);
+}
+
+.skill-info {
+  text-align: center;
+  width: 100%;
+}
+
+.skill-info h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0;
+  transition: all 0.3s ease;
+}
+
+.skill-content:hover .skill-info h3 {
+  color: var(--netflix-red);
+}
+
+.skill-details {
+  margin-top: 10px;
+  width: 100%;
+}
+
+.skill-level-container {
+  width: 100%;
+  height: 6px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+
+.skill-level {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.8s ease-in-out;
+  background-color: var(--netflix-red) !important;
+  box-shadow: 0 0 10px rgba(229, 9, 20, 0.5);
+}
+
+.netflix-footer {
+  text-align: center;
+  margin-top: 60px;
+  padding: 20px;
+  border-top: 1px solid rgba(229, 9, 20, 0.3);
+  position: relative;
+}
+
+.netflix-footer::before {
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 60px;
+  background-color: var(--netflix-red);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 20px rgba(229, 9, 20, 0.5);
+  z-index: 1;
+}
+
+.netflix-footer p {
+  font-size: 1.5rem;
+  color: var(--netflix-red);
+  font-weight: 500;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Netflix loading animation */
+.netflix-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--netflix-black);
+}
+
+.netflix-loading-logo {
+  position: relative;
+  width: 200px;
+  height: 60px;
+  background-color: var(--netflix-red);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  animation: pulse 1.5s infinite;
+  box-shadow: 0 0 30px rgba(229, 9, 20, 0.7);
+}
+
+.netflix-loading-logo span {
+  color: var(--netflix-white);
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 0 0 30px rgba(229, 9, 20, 0.7);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.05);
+    box-shadow: 0 0 50px rgba(229, 9, 20, 0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 0 0 30px rgba(229, 9, 20, 0.7);
+  }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .netflix-header h1 {
+    font-size: 3rem;
+  }
+
+  .skill-card {
+    width: 150px;
+    height: 100px;
+  }
+
+  .skill-icon {
+    font-size: 2rem;
+  }
+
+  .category-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .netflix-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .skill-card {
+    width: 130px;
+    height: 90px;
+  }
+
+  .skill-icon {
+    font-size: 1.8rem;
+  }
+
+  .skill-info h3 {
+    font-size: 0.9rem;
+  }
+
+  .category-title {
+    font-size: 1.3rem;
+  }
+}
