@@ -3,22 +3,34 @@ import './Experience.css';
 
 const experienceImages = [
   {
-    src: "/api/placeholder/1920/1080",
-    alt: "Open Source Journey",
-    title: "OPEN SOURCE CONTRIBUTOR",
-    description: "Contributing to Jenkins with 15+ PRs and active community participation",
+    src: "/experience/dscWorkshop.jpg",
+    alt: "GDSC Workshop",
+    title: "GDSC Open Source Workshop",
   },
   {
-    src: "/api/placeholder/1920/1080",
+    src: "/experience/anchoring.jpg",
     alt: "Leadership Excellence",
-    title: "EXECUTIVE AT SPEC",
-    description: "Leading 35-member teams and organizing major hackathons",
+    title: "Electrothon - Day 1",
   },
   {
-    src: "/api/placeholder/1920/1080",
+    src: "/experience/electrothon.jpg",
     alt: "Innovation & Development",
-    title: "GDSC VOLUNTEER",
-    description: "Building innovative apps with 300+ participants and 150K+ interactions",
+    title: "Electrothon - Day 2",
+  },
+  {
+    src: "/experience/specfest.JPG",
+    alt: "Innovation & Development",
+    title: "SpecFest",
+  },
+  {
+    src: "/experience/dscGroup.jpg",
+    alt: "Innovation & Development",
+    title: "GDSC 2K25",
+  },
+  {
+    src: "/experience/specGroup.JPG",
+    alt: "Innovation & Development",
+    title: "SPEC 2K25",
   },
 ];
 
@@ -39,7 +51,7 @@ const experiences = [
     company: "Society for Promotion of Electronics Culture, NIT Hamirpur",
     period: "Aug 2024 – Present",
     type: "Leadership",
-    description: "Spearheaded website updates for 5000+ users, led 35-member team for workshops, organizing Electrothon 7.0 with 1500+ expected attendees",
+    description: "Spearheaded website updates for 5000+ users, led 35-member team for workshops, organized Electrothon 7.0 with 1500+ registrations",
     color: "#00d4aa",
     icon: "⚡"
   },
@@ -49,7 +61,7 @@ const experiences = [
     company: "Google Developer Student Clubs",
     period: "Jan 2024 – Present",
     type: "Development",
-    description: "Developed 'Among Us' app with 300+ participants, built BittuAI platform leveraging generative AI",
+    description: "Developed 'Among Us' app with 300+ participants, built BittuAI platform leveraging generative AI . Took various workshops and organised various events",
     color: "#ff6b35",
     icon: "💻"
   },
@@ -184,7 +196,6 @@ const Experience = () => {
       <div className="experience-content-container">
         <div className="timeline-header">
           <h2 className="section-title">MY JOURNEY</h2>
-          <p className="section-subtitle">A cinematic look at my professional evolution</p>
         </div>
 
         <div 
