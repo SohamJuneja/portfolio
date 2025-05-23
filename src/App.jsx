@@ -1,6 +1,7 @@
 "use client"    
 
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom"
+import { Analytics } from "@vercel/analytics/react"
 import NetflixTitle from "./components/NetflixTitle"
 import Browse from "./components/Browse"
 import Navbar from "./components/Navbar"
@@ -14,6 +15,7 @@ import Music from "./components/Music";
 import Blog from "./components/Blog";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
+
 function AppRoutes() {
   const location = useLocation();
   // Only show Navbar if not on the landing or browse page
@@ -21,7 +23,7 @@ function AppRoutes() {
 
   return (
     <>
-      <ScrollToTop /> {/* <-- add this inside AppRoutes to ensure it works with useLocation */}
+      <ScrollToTop />
       {showNavbar && <Navbar />}
       <Routes>
         <Route path="/" element={<NetflixTitle />} />
@@ -44,6 +46,7 @@ export default function App() {
   return (
     <Router>
       <AppRoutes />
+      <Analytics />
     </Router>
   )
 }
