@@ -6,17 +6,9 @@ import "./Achievements.css"
 import { FaTrophy, FaAward, FaMedal, FaStar } from "react-icons/fa"
 
 const Achievements = () => {
-  const [isLoading, setIsLoading] = useState(true)
   const [currentSlide, setCurrentSlide] = useState(0)
   const [isAutoPlaying, setIsAutoPlaying] = useState(true)
   const carouselRef = useRef(null)
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false)
-    }, 1500)
-    return () => clearTimeout(timer)
-  }, [])
 
   // Auto-advance carousel with pause on hover
   useEffect(() => {
@@ -112,16 +104,6 @@ const Achievements = () => {
 
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + competitionImages.length) % competitionImages.length)
-  }
-
-  if (isLoading) {
-    return (
-      <div className="netflix-loading">
-        <div className="netflix-loading-logo">
-          <span>LOADING</span>
-        </div>
-      </div>
-    )
   }
 
   return (
