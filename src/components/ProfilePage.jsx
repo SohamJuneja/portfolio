@@ -8,7 +8,8 @@ import './ProfilePage.css';
 const ProfilePage = () => {
   const location = useLocation();
   const profileName = location.state?.profileName || "Recruiter";
-  const backgroundGif = location.state?.backgroundGif || "https://media.giphy.com/media/xT9IgzoKnwFNmISR8I/giphy.gif";
+  const backgroundGif = location.state?.backgroundGif || "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExbmZlaWNiam96c3NkMGpqazJ2dmlvZ25hdHFiYjRjZWlucmU1YjZiayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/DqvaPxbqDww0g/giphy.gif";
+  const profileType = profileName.toLowerCase();
 
   return (
     <>
@@ -16,7 +17,7 @@ const ProfilePage = () => {
         className="profile-page"
         style={{ backgroundImage: `url(${backgroundGif})` }}
       >
-        <ProfileBanner />
+        <ProfileBanner profileType={profileType} />
       </div>
       <TopPicksRow profile={profileName} />
       <ContinueWatching profile={profileName} />
