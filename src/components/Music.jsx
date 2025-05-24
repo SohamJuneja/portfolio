@@ -6,15 +6,18 @@ import { ChevronDown, ChevronUp, Info, Play, Volume2, Heart, Share2 } from "luci
 // Netflix-inspired styling directly in the component
 const netflixStyles = {
   container: {
-    minHeight: "100%",
+    minHeight: "100vh",
     backgroundColor: "#000",
     color: "#fff",
-    paddingTop: "0px", // Added top padding to prevent collision with header
+    paddingTop: "0px",
+    position: "relative",
+    overflow: "hidden"
   },
   featured: {
     position: "relative",
     height: "70vh",
     marginBottom: "2rem",
+    backgroundColor: "#000"
   },
   featuredGradientTop: {
     position: "absolute",
@@ -119,6 +122,7 @@ const netflixStyles = {
     margin: "0 auto",
     padding: "0 1rem",
     marginBottom: "3rem",
+    backgroundColor: "#000"
   },
   sectionTitle: {
     fontSize: "1.5rem",
@@ -438,7 +442,7 @@ export default function MusicContent() {
       image: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/21/6a/ec/216aec26-9066-34c8-bfbb-943d7aafd5f7/artwork.jpg/1200x630bb.jpg"
     },
     {
-      id: "sukha-2003",
+      id: "prophec-season",
       title: "The Season",
       artist: "Prophec",
       image: "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/b6/7c/9e/b67c9e77-62bd-4cc4-9e86-e202969743bb/5055964338213.jpg/1200x1200bb.jpg"
@@ -447,93 +451,119 @@ export default function MusicContent() {
 
   const internationalMusic = [
     {
-      id: "weeknd-blinding-lights",
-      title: "Blinding Lights",
-      artist: "The Weeknd",
-      year: 2019,
-      genre: ["Synth-pop", "R&B"],
-      image: "https://i.scdn.co/image/ab67616d0000b2738863bc11d2aa12b54f5aeb36",
-      description:
-        "This song defined 2020 for me. Those opening synths instantly transport me back to lockdown days, dancing alone in my room at 2AM. The Weeknd really captured that perfect blend of nostalgia and futuristic vibes. Still gets me hyped every single time.",
-      inPlaylist: true,
+      id: "tame-impala-currents",
+      title: "Currents",
+      artist: "Tame Impala",
+      image: "https://upload.wikimedia.org/wikipedia/en/9/9b/Tame_Impala_-_Currents.png"
     },
     {
-      id: "taylor-swift-august",
-      title: "august",
-      artist: "Taylor Swift",
-      year: 2020,
-      genre: ["Indie Folk", "Pop"],
-      image: "https://i.scdn.co/image/ab67616d0000b273c288028c2592f400dd0b9233",
-      description:
-        "Never considered myself a Swiftie until folklore dropped. This song especially just WRECKED me. 'August slipped away like a bottle of wine' is poetry. The way she captures that feeling of a fleeting summer romance is just *chef's kiss*. Pure storytelling magic.",
-      inPlaylist: false,
+      id: "tame-impala-slow-rush",
+      title: "The Slow Rush",
+      artist: "Tame Impala",
+      image: "https://upload.wikimedia.org/wikipedia/en/5/54/Tame_Impala_-_The_Slow_Rush.png"
     },
     {
-      id: "kendrick-alright",
-      title: "Alright",
-      artist: "Kendrick Lamar",
-      year: 2015,
-      genre: ["Hip-Hop", "Rap"],
-      image: "https://i.scdn.co/image/ab67616d0000b273cdb645498cd3d8a2db4d05e1",
-      description:
-        "This song got me through some DARK times. That hook - 'We gon' be alright' - became my personal mantra during finals week. Kendrick's ability to blend social commentary with something so catchy and uplifting is unmatched. True genius at work.",
-      inPlaylist: true,
+      id: "pink-floyd-wall",
+      title: "The Wall",
+      artist: "Pink Floyd",
+      image: "https://i.scdn.co/image/ab67616d0000b2735d48e2f56d691f9a4e4b0bdf"
     },
     {
-      id: "arctic-monkeys-505",
-      title: "505",
+      id: "pink-floyd-wish-you-were-here",
+      title: "Wish You Were Here",
+      artist: "Pink Floyd",
+      image: "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Pink_Floyd%2C_Wish_You_Were_Here_%281975%29.png/250px-Pink_Floyd%2C_Wish_You_Were_Here_%281975%29.png"
+    },
+    {
+      id: "arctic-monkeys-am",
+      title: "AM",
       artist: "Arctic Monkeys",
-      year: 2007,
-      genre: ["Indie Rock", "Alternative"],
-      image: "https://i.scdn.co/image/ab67616d0000b273d4daf28d55fe5050a5becd6c",
-      description:
-        "That moment when the drums kick in? CHILLS. Every. Single. Time. Found this during my first year of college and it's been my go-to late night driving song ever since. Alex Turner's lyrics are just poetry - 'I'm always just about to go and spoil a surprise' hits way too close to home.",
-      inPlaylist: true,
+      image: "https://upload.wikimedia.org/wikipedia/commons/e/e7/%22AM%22_%28Arctic_Monkeys%29.jpg"
     },
     {
-      id: "dua-lipa-levitating",
-      title: "Levitating",
-      artist: "Dua Lipa",
-      year: 2020,
-      genre: ["Pop", "Disco"],
-      image: "https://i.scdn.co/image/ab67616d0000b273bd26ede1ae69327010d49946",
-      description:
-        "THE ultimate mood booster! Impossible to be sad while this is playing. That disco-inspired beat just makes you want to dance no matter where you are. I've definitely embarrassed myself dancing to this in public places more times than I can count. Worth it every time.",
-      inPlaylist: false,
+      id: "daft-punk-ram",
+      title: "Random Access Memories",
+      artist: "Daft Punk",
+      image: "https://upload.wikimedia.org/wikipedia/en/2/26/Daft_Punk_-_Random_Access_Memories.png"
     },
     {
-      id: "frank-ocean-nights",
-      title: "Nights",
-      artist: "Frank Ocean",
-      year: 2016,
-      genre: ["R&B", "Alternative"],
-      image: "https://i.scdn.co/image/ab67616d0000b273c5649add07ed3720be9d5526",
-      description:
-        "That beat switch at exactly 3:30? GENIUS. Pure genius. This song feels like two completely different emotional experiences. Frank Ocean really created something special with Blonde, and this track is the centerpiece. Perfect for late night overthinking sessions.",
-      inPlaylist: true,
+      id: "boa-duvet",
+      title: "Duvet",
+      artist: "Boa",
+      image: "https://i.ytimg.com/vi/o7fgFaXKVa0/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBuvtgSJ6hYdJg3uOngEi7xuHsOSQ"
     },
     {
-      id: "radiohead-weird-fishes",
-      title: "Weird Fishes/Arpeggi",
-      artist: "Radiohead",
-      year: 2007,
-      genre: ["Alternative", "Art Rock"],
-      image: "https://i.scdn.co/image/ab67616d0000b273de3c04b5fc750b68899b20a9",
-      description:
-        "Discovered this during a particularly existential phase in college and it just CLICKED. Those hypnotic arpeggios and Thom Yorke's ethereal vocals create this underwater feeling that's hard to describe. 'I hit the bottom and escape' - still gives me goosebumps.",
-      inPlaylist: false,
+      id: "keane-somewhere-only-we-know",
+      title: "Somewhere Only We Know",
+      artist: "Keane",
+      image: "https://i.scdn.co/image/ab67616d0000b2737d6cd95a046a3c0dacbc7d33"
     },
     {
-      id: "billie-eilish-happier-than-ever",
-      title: "Happier Than Ever",
-      artist: "Billie Eilish",
-      year: 2021,
-      genre: ["Pop", "Alternative"],
-      image: "https://i.scdn.co/image/ab67616d0000b273c8b444df094279e70d0ed856",
-      description:
-        "That moment when the song transforms from quiet ballad to full-on rock anthem? CATHARSIS. Pure catharsis. Screaming 'YOU MADE ME HATE THIS CITY' at the top of my lungs has been therapeutic on multiple occasions. Billie really captured the essence of post-breakup anger perfectly.",
-      inPlaylist: true,
+      id: "weeknd-after-hours",
+      title: "After Hours",
+      artist: "The Weeknd",
+      image: "https://upload.wikimedia.org/wikipedia/en/c/c1/The_Weeknd_-_After_Hours.png"
     },
+    {
+      id: "weeknd-starboy",
+      title: "Starboy",
+      artist: "The Weeknd",
+      image: "https://i.scdn.co/image/ab67616d0000b2734718e2b124f79258be7bc452"
+    },
+    {
+      id: "chainsmokers-sick-boy",
+      title: "Sick Boy",
+      artist: "The Chainsmokers",
+      image: "https://upload.wikimedia.org/wikipedia/en/d/d7/The_Chainsmokers_%E2%80%93_Sick_Boy_album.png"
+    },
+    {
+      id: "chainsmokers-memories",
+      title: "Memories...Do Not Open",
+      artist: "The Chainsmokers",
+      image: "https://upload.wikimedia.org/wikipedia/en/5/51/Memories...Do_Not_Open.jpg"
+    },
+    {
+      id: "lumineers-cleopatra",
+      title: "Cleopatra",
+      artist: "The Lumineers",
+      image: "https://upload.wikimedia.org/wikipedia/en/4/4f/Cleopatra_album_cover.jpg"
+    },
+    {
+      id: "eminem-show",
+      title: "The Eminem Show",
+      artist: "Eminem",
+      image: "https://upload.wikimedia.org/wikipedia/en/3/35/The_Eminem_Show.jpg"
+    },
+    {
+      id: "eminem-recovery",
+      title: "Recovery",
+      artist: "Eminem",
+      image: "https://m.media-amazon.com/images/I/51uKuWtPQAL._UF1000,1000_QL80_.jpg"
+    },
+    {
+      id: "coldplay-head-full-of-dreams",
+      title: "A Head Full of Dreams",
+      artist: "Coldplay",
+      image: "https://m.media-amazon.com/images/I/A1PfrjnfTCL._UF1000,1000_QL80_.jpg"
+    },
+    {
+      id: "post-malone-hollywoods-bleeding",
+      title: "Hollywood's Bleeding",
+      artist: "Post Malone",
+      image: "https://m.media-amazon.com/images/I/61qlAR-fHeL._UF1000,1000_QL80_.jpg"
+    },
+    {
+      id: "coldplay-parachutes",
+      title: "Parachutes",
+      artist: "Coldplay",
+      image: "https://upload.wikimedia.org/wikipedia/en/f/fd/Coldplay_-_Parachutes.png"
+    },
+    {
+      id: "la-la-land",
+      title: "La La Land",
+      artist: "Various Artists",
+      image: "https://m.media-amazon.com/images/M/MV5BMzUzNDM2NzM2MV5BMl5BanBnXkFtZTgwNTM3NTg4OTE@._V1_.jpg"
+    }
   ]
 
   const toggleExpanded = (id) => {
