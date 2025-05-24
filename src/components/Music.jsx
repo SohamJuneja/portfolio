@@ -305,7 +305,7 @@ const getResponsiveStyles = () => {
 }
 
 export default function MusicContent() {
-  const [activeCategory, setActiveCategory] = useState("indian")
+  const [activeCategory, setActiveCategory] = useState("subcontinental")
   const [expandedCard, setExpandedCard] = useState(null)
   const [hoveredCard, setHoveredCard] = useState(null)
   const [responsiveStyles, setResponsiveStyles] = useState(getResponsiveStyles())
@@ -336,93 +336,113 @@ export default function MusicContent() {
 
   const indianMusic = [
     {
-      id: "divine-kaam25",
-      title: "Kaam 25",
-      artist: "DIVINE",
-      year: 2018,
-      genre: ["Hip-Hop", "Rap"],
-      image: "https://i.scdn.co/image/ab67616d0000b273c5649add07ed3720be9d5526",
-      description:
-        "First heard this in Sacred Games and was BLOWN AWAY. DIVINE's flow is just unmatched. This track got me through countless all-nighters during my final year project. 'Apna time aayega' became my life motto before it was even a thing.",
-      inPlaylist: true,
+      id: "bayaan-suno",
+      title: "Suno",
+      artist: "Bayaan",
+      image: "https://i.scdn.co/image/ab67616d0000b2737f8011441f4d43a9a6bba9d5"
     },
     {
-      id: "arijit-channa-mereya",
-      title: "Channa Mereya",
-      artist: "Arijit Singh",
-      year: 2016,
-      genre: ["Bollywood", "Romance"],
-      image: "https://c.saavncdn.com/994/Ae-Dil-Hai-Mushkil-Hindi-2016-500x500.jpg",
-      description:
-        "The ultimate heartbreak anthem. Played this on repeat for WEEKS after my first breakup. That 'tadap tadap' part? Pure pain. Arijit's voice has this magical quality that makes you feel like he's singing YOUR story. Still can't listen to it without getting emotional.",
-      inPlaylist: false,
-    },
-    {
-      id: "ritviz-sage",
-      title: "Sage",
-      artist: "Ritviz",
-      year: 2019,
-      genre: ["Electronic", "Indie"],
-      image: "https://i.scdn.co/image/ab67616d0000b273e5e0c3f26a36c6c4a96c175e",
-      description:
-        "Discovered this at a college fest and it was INSTANT obsession. That drop is just *chef's kiss*. Ritviz has this unique way of blending classical Indian elements with electronic beats that just hits different. Perfect for late night drives or coding sessions.",
-      inPlaylist: true,
-    },
-    {
-      id: "ap-dhillon-excuses",
-      title: "Excuses",
-      artist: "AP Dhillon",
-      year: 2020,
-      genre: ["Punjabi", "Pop"],
-      image: "https://i.scdn.co/image/ab67616d0000b273c5e2f81bc09a8662289a8c02",
-      description:
-        "This song was EVERYWHERE in 2021 and I was NOT complaining. That 'kehndi hundi si' hook is permanently stuck in my head. AP Dhillon really changed the game with this one. The perfect blend of Punjabi lyrics with that modern trap production. Absolute banger.",
-      inPlaylist: true,
-    },
-    {
-      id: "prateek-kuhad-cold-mess",
-      title: "Cold/Mess",
-      artist: "Prateek Kuhad",
-      year: 2018,
-      genre: ["Indie", "Folk"],
-      image: "https://i.scdn.co/image/ab67616d0000b273d9a129c4a656a55afff2ca02",
-      description:
-        "Found this during a particularly rough patch and it felt like Prateek wrote it just for me. That music video with Jim and Zoya? TEARS. Every. Single. Time. There's something so raw and honest about his songwriting that just cuts straight to the heart.",
-      inPlaylist: false,
-    },
-    {
-      id: "nucleya-bass-rani",
-      title: "Bass Rani",
-      artist: "Nucleya",
-      year: 2015,
-      genre: ["Electronic", "Bass"],
-      image: "https://i.scdn.co/image/ab67616d0000b273c5ab8a29c0b7b3d6c87e76b3",
-      description:
-        "The album that got me into electronic music! Heard this at Sunburn 2016 and lost my MIND. Nucleya's fusion of desi samples with those insane bass drops is just genius. 'Aaja' still makes me go crazy whenever it comes on. Pure energy in audio form.",
-      inPlaylist: true,
-    },
-    {
-      id: "ar-rahman-kun-faya-kun",
-      title: "Kun Faya Kun",
-      artist: "A.R. Rahman",
-      year: 2011,
-      genre: ["Sufi", "Spiritual"],
-      image: "https://c.saavncdn.com/994/Rockstar-Hindi-2011-20221212023537-500x500.jpg",
-      description:
-        "This song is literal therapy. No matter how stressed I am, Rahman's composition just calms my soul instantly. The way it builds gradually with those Sufi vocals is pure magic. My go-to song for meditation or when I just need to center myself.",
-      inPlaylist: false,
-    },
-    {
-      id: "local-train-aaoge-tum-kabhi",
-      title: "Aaoge Tum Kabhi",
+      id: "local-train-aalas",
+      title: "Aalas Ka Pedh",
       artist: "The Local Train",
-      year: 2015,
-      genre: ["Rock", "Indie"],
-      image: "https://i.scdn.co/image/ab67616d0000b273c65f8d04502eeddbdd61fa71",
-      description:
-        "Discovered this band during a college road trip and was OBSESSED. Their raw energy and honest lyrics just hit different. This track especially has this nostalgic quality that makes you think about all the people who've come and gone in your life. Indie rock at its finest.",
-      inPlaylist: true,
+      image: "https://c.saavncdn.com/111/Aalas-Ka-Pedh-Hindi-2015-20231005005130-500x500.jpg"
     },
+    {
+      id: "yellow-diary-izafa",
+      title: "Izafa",
+      artist: "The Yellow Diary",
+      image: "https://c.saavncdn.com/729/Izafa-Punjabi-2018-20181115101503-500x500.jpg"
+    },
+    {
+      id: "bayaan-4saal",
+      title: "4 Saal",
+      artist: "Bayaan",
+      image: "https://i.scdn.co/image/ab67616d0000b273f9ea670afa6ad3f5cc553f20"
+    },
+    {
+      id: "krsna-yours-truly",
+      title: "Yours Truly",
+      artist: "KRSNA",
+      image: "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/24/bf/21/24bf21b2-7b32-4256-c9dd-67d5a70fee75/199350613517.jpg/600x600bf-60.jpg"
+    },
+    {
+      id: "krsna-still-here",
+      title: "Still Here",
+      artist: "KRSNA",
+      image: "https://i.scdn.co/image/ab67616d0000b2737bb23ac6330733d95888e612"
+    },
+    {
+      id: "krsna-far-from-over",
+      title: "Far From Over",
+      artist: "KRSNA",
+      image: "https://i.scdn.co/image/ab67616d0000b27383e257b20f473f0063cdd351"
+    },
+    {
+      id: "seedhe-maut-lunch-break",
+      title: "Lunch Break",
+      artist: "Seedhe Maut",
+      image: "https://images.genius.com/2796bb670394d0cee1014739773c995f.1000x1000x1.jpg"
+    },
+    {
+      id: "seedhe-maut-n",
+      title: "N",
+      artist: "Seedhe Maut",
+      image: "https://images.genius.com/855b187ebe6410db091f94806b605d67.1000x1000x1.jpg"
+    },
+    {
+      id: "aashiqui-2",
+      title: "Aashiqui 2",
+      artist: "Various Artists",
+      image: "https://m.media-amazon.com/images/S/pv-target-images/f660a95899f7324b8593291348f78f551f32c1a40304042a43195ca71eb92931.jpg"
+    },
+    {
+      id: "ek-villain",
+      title: "Ek Villain",
+      artist: "Various Artists",
+      image: "https://c.saavncdn.com/151/Ek-Villain-Hindi-2014-500x500.jpg"
+    },
+    {
+      id: "half-girlfriend",
+      title: "Half Girlfriend",
+      artist: "Various Artists",
+      image: "https://upload.wikimedia.org/wikipedia/en/6/6e/Half_Girlfriend_Poster.jpg"
+    },
+    {
+      id: "ghajini",
+      title: "Ghajini",
+      artist: "Various Artists",
+      image: "https://m.media-amazon.com/images/M/MV5BMjk3ZmQyYjAtZTgwZS00YjliLTljZmEtMDU1Nzk1Y2NhYmRlXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
+    },
+    {
+      id: "nusrat-fateh-ali-khan",
+      title: "Greatest Hits",
+      artist: "Nusrat Fateh Ali Khan",
+      image: "https://i.scdn.co/image/ab67616d0000b273d1a78643014371ca49d7cb22"
+    },
+    {
+      id: "sharry-mann-aate-di",
+      title: "Aate Di Chiri",
+      artist: "Sharry Mann",
+      image: "https://c.saavncdn.com/634/Aate-Di-Chiri-Punjabi-2012-500x500.jpg"
+    },
+    {
+      id: "sidhu-pbx1",
+      title: "PBX 1",
+      artist: "Sidhu Moose Wala",
+      image: "https://upload.wikimedia.org/wikipedia/en/0/03/PBX_1_%28album%29.jpg"
+    },
+    {
+      id: "sukha-2003",
+      title: "2003",
+      artist: "Sukha",
+      image: "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/21/6a/ec/216aec26-9066-34c8-bfbb-943d7aafd5f7/artwork.jpg/1200x630bb.jpg"
+    },
+    {
+      id: "sukha-2003",
+      title: "The Season",
+      artist: "Prophec",
+      image: "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/b6/7c/9e/b67c9e77-62bd-4cc4-9e86-e202969743bb/5055964338213.jpg/1200x1200bb.jpg"
+    }
   ]
 
   const internationalMusic = [
@@ -534,18 +554,14 @@ export default function MusicContent() {
   }
 
   const getFeaturedContent = () => {
-    if (activeCategory === "indian") {
+    if (activeCategory === "subcontinental") {
       return {
         title: "Bayaan",
-        description:
-          "The track that changed my perception of Indian hip-hop forever. First heard this in Sacred Games and was completely blown away by DIVINE's raw energy and authentic storytelling..",
         image: "https://lh3.googleusercontent.com/FVhxdltn23ryETRuSEEIl109CvUaiT1nXYBQ503BstnPaO0hRiOPbw-IMeEvX-ni2WZ4K_Kqk6Z4Sg=w2880-h1200-p-l90-rj",
       }
     } else {
       return {
-        title: "Frank Ocean - Nights",
-        description:
-          "This song is a masterpiece that completely redefined what R&B could be. That legendary beat switch at exactly 3:30 splits the album perfectly in half and feels like transitioning between two completely different emotional worlds.",
+        title: "Daft Punk",
         image: "https://c4.wallpaperflare.com/wallpaper/128/446/416/daft-punk-blue-hd-wallpaper-preview.jpg",
       }
     }
@@ -598,13 +614,13 @@ export default function MusicContent() {
       <div style={netflixStyles.categoryToggleContainer}>
         <div style={netflixStyles.categoryToggle}>
           <button
-            onClick={() => setActiveCategory("indian")}
+            onClick={() => setActiveCategory("subcontinental")}
             style={{
               ...netflixStyles.categoryButton,
-              ...(activeCategory === "indian" ? netflixStyles.categoryButtonActive : {}),
+              ...(activeCategory === "subcontinental" ? netflixStyles.categoryButtonActive : {}),
             }}
           >
-            Indian
+            Subcontinental
           </button>
           <button
             onClick={() => setActiveCategory("international")}
@@ -621,11 +637,11 @@ export default function MusicContent() {
       {/* Content grid */}
       <section style={netflixStyles.contentSection}>
         <h3 style={netflixStyles.sectionTitle}>
-          {activeCategory === "indian" ? "Desi Beats That Define Me" : "Global Tracks That Changed My Life"}
+          {activeCategory === "subcontinental" ? "" : ""}
         </h3>
 
         <div style={mergeStyles(netflixStyles.contentGrid, "contentGrid")}>
-          {(activeCategory === "indian" ? indianMusic : internationalMusic).map((item) => (
+          {(activeCategory === "subcontinental" ? indianMusic : internationalMusic).map((item) => (
             <div
               key={item.id}
               style={{

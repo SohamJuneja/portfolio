@@ -3,7 +3,7 @@
 import { motion } from "framer-motion"
 import "./Projects.css"
 import { FaReact, FaNodeJs, FaEthereum, FaPython } from "react-icons/fa"
-import { SiTypescript, SiMongodb, SiSolidity, SiElectron, SiWebpack, SiArchlinux, SiHtml5, SiCss3, SiJavascript, SiTensorflow, SiDocker, SiLinux, SiTailwindcss, SiVite, SiExpress } from "react-icons/si"
+import { SiTypescript, SiMongodb, SiSolidity, SiElectron, SiWebpack, SiArchlinux, SiHtml5, SiCss3, SiJavascript, SiTensorflow, SiDocker, SiLinux, SiTailwindcss, SiVite, SiExpress, SiCplusplus, SiC, SiAssemblyscript, SiGnu } from "react-icons/si"
 
 const Projects = () => {
   const getTechIcon = (tech) => {
@@ -26,7 +26,11 @@ const Projects = () => {
       "Linux": <SiLinux />,
       "TailwindCSS": <SiTailwindcss />,
       "Vite": <SiVite />,
-      "Express": <SiExpress />
+      "Express": <SiExpress />,
+      "C": <SiC />,
+      "C++": <SiCplusplus />,
+      "Assembly": <SiAssemblyscript />,
+      "GCC": <SiGnu />
     }
     return iconMap[tech] || null
   }
@@ -44,7 +48,7 @@ const Projects = () => {
       id: 4,
       title: "NextOS",
       description: "Custom operating system with multitasking support and driver abstraction",
-      image: "/images/blue1.jpg",
+      image: "/images/nextos.png",
       tags: ["C", "C++", "Assembly", "GCC"],
       year: 2022,
     },
