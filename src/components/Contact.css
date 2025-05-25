@@ -25,7 +25,7 @@ body {
 
 /* Class for contact page body to prevent scrolling */
 .contact-page-body {
-  overflow-y: hidden;
+  overflow-y: hidden; /* Hide overflow on large screens */
 }
 
 /* Netflix Contact Container */
@@ -483,6 +483,10 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .contact-page-body {
+    overflow-y: auto; /* Allow scrolling on mobile */
+  }
+
   .netflix-contact {
     padding: 1rem;
     margin-top: 50px;
