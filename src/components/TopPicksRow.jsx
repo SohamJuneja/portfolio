@@ -9,7 +9,7 @@ const TopPicksRow = ({ profile }) => {
     Recruiter: [
       {
         title: "Skills",
-        imgSrc: "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExNXBwemcwNXRnamY0MmYzczExYmVwOGpyaWppMXIzcWlxeDFjYmEweiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/FiFcE8Hxs99VvIB09f/giphy.gif",
+        imgSrc: "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExdDBhaTN3NGpzc2wwNDB4N3JkNzJ1anB4bmJ0bmlzcnNlNXVwYTNqbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/8IGuMMq3Aka8Zq9Kax/giphy.gif",
         route: "/skills"
       },
       {

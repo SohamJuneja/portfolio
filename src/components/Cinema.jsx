@@ -493,7 +493,7 @@ export default function CinemaContent() {
       title: "Drishyam",
       year: 2015,
       genre: "Thriller",
-      image: "https://m.media-amazon.com/images/M/MV5BYmJhZmJlYTItZmZlNy00MGY0LTg0ZGMtNWFkYWU5NTA1YTc3XkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_.jpg"
+      image: "https://upload.wikimedia.org/wikipedia/en/thumb/8/8a/Drishyam_2015_film.jpg/250px-Drishyam_2015_film.jpg"
     },
     {
       id: "get-out",
@@ -507,35 +507,35 @@ export default function CinemaContent() {
       title: "The Mist",
       year: 2007,
       genre: "Horror",
-      image: "https://m.media-amazon.com/images/M/MV5BMTU2MDYxMTU1NV5BMl5BanBnXkFtZTcwMjM2MjQ1MQ@@._V1_.jpg"
+      image: "https://upload.wikimedia.org/wikipedia/en/a/a1/The_Mist_poster.jpg"
     },
     {
       id: "action-hero",
       title: "An Action Hero",
       year: 2022,
       genre: "Action",
-      image: "https://m.media-amazon.com/images/M/MV5BMTU0MjU5NjI5MF5BMl5BanBnXkFtZTcwMjM2MjQ1MQ@@._V1_.jpg"
+      image: "https://m.media-amazon.com/images/M/MV5BNWUzNzljNjMtYTdiZS00MWQ2LWFkZWItYTM0MzVmZGFhYzNjXkEyXkFqcGc@._V1_.jpg"
     },
     {
       id: "guilty",
       title: "The Guilty",
       year: 2021,
       genre: "Thriller",
-      image: "https://m.media-amazon.com/images/M/MV5BMTU0MjU5NjI5MF5BMl5BanBnXkFtZTcwMjM2MjQ1MQ@@._V1_.jpg"
+      image: "https://dnm.nflximg.net/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABUL3lGqmL4lNOKWRxYPZ4YI0c2SsnAfQQD8IwDoOfH9Hd7wYv0ztpNQ_N5NOveQY4IAzxyOJy8Tg3kYgxoyKBjuHwJ7zM0Hoe4-PaHJCsFwbJzmlmizscQzaSFQLLnu9kRFNAQ.jpg?r=f9b"
     },
     {
       id: "everything-everywhere",
       title: "Everything Everywhere All at Once",
       year: 2022,
       genre: "Sci-Fi",
-      image: "https://m.media-amazon.com/images/M/MV5BYTdiOTIyZTQtNmQ1OS00NjZlLWIyMTgtYzk5Y2M3ZDVmOTk0XkEyXkFqcGdeQXVyMTAzMDg4NzU0._V1_.jpg"
+      image: "https://upload.wikimedia.org/wikipedia/en/1/1e/Everything_Everywhere_All_at_Once.jpg"
     },
     {
       id: "invention-of-lying",
       title: "The Invention of Lying",
       year: 2009,
       genre: "Comedy",
-      image: "https://m.media-amazon.com/images/M/MV5BMTU0MjU5NjI5MF5BMl5BanBnXkFtZTcwMjM2MjQ1MQ@@._V1_.jpg"
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCu4Q3nEgLPHMPWeyuA0CseRu8BuyY7tOlBQ&s"
     },
     {
       id: "predestination",
@@ -549,14 +549,14 @@ export default function CinemaContent() {
       title: "Talvar",
       year: 2015,
       genre: "Crime",
-      image: "https://m.media-amazon.com/images/M/MV5BMTYzNDM3MzM5N15BMl5BanBnXkFtZTgwOTcwMDI5MTE@._V1_.jpg"
+      image: "https://upload.wikimedia.org/wikipedia/en/9/91/TalvarFilmPoster.jpg"
     },
     {
       id: "znmd",
       title: "Zindagi Na Milegi Dobara",
       year: 2011,
       genre: "Drama",
-      image: "https://m.media-amazon.com/images/M/MV5BZGFmMjM5OWM5YjYzYyZC00YzM0LWE0YzQtYzM0YzM0YzM0YzM0XkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_.jpg"
+      image: "https://upload.wikimedia.org/wikipedia/en/1/17/Zindagi_Na_Milegi_Dobara.jpg"
     },
     {
       id: "wolf-of-wall-street",
@@ -570,70 +570,70 @@ export default function CinemaContent() {
       title: "12th Fail",
       year: 2023,
       genre: "Drama",
-      image: "https://m.media-amazon.com/images/M/MV5BMTU0MjU5NjI5MF5BMl5BanBnXkFtZTcwMjM2MjQ1MQ@@._V1_.jpg"
+      image: "https://m.media-amazon.com/images/M/MV5BNTE3OTIxZDYtNjA0NC00N2YxLTg1NGQtOTYxNmZkMDkwOWNjXkEyXkFqcGc@._V1_.jpg"
     },
     {
       id: "talaash",
       title: "Talaash",
       year: 2012,
       genre: "Thriller",
-      image: "https://m.media-amazon.com/images/M/MV5BMTM1MTkzNzA3NF5BMl5BanBnXkFtZTcwNTg5MjM5OA@@._V1_.jpg"
+      image: "https://upload.wikimedia.org/wikipedia/en/f/f3/Talaash_poster.jpg"
     },
     {
       id: "lootera",
       title: "Lootera",
       year: 2013,
       genre: "Drama",
-      image: "https://m.media-amazon.com/images/M/MV5BMTU0MjU5NjI5MF5BMl5BanBnXkFtZTcwMjM2MjQ1MQ@@._V1_.jpg"
+      image: "https://upload.wikimedia.org/wikipedia/en/c/cc/Lootera_poster.jpg"
     },
     {
       id: "silenced",
       title: "Silenced",
       year: 2011,
       genre: "Drama",
-      image: "https://m.media-amazon.com/images/M/MV5BMTU0MjU5NjI5MF5BMl5BanBnXkFtZTcwMjM2MjQ1MQ@@._V1_.jpg"
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlecLj-6EaojYweuTj1g_AaQQ320q9afpOdQ&s"
     },
     {
       id: "rang-de-basanti",
       title: "Rang De Basanti",
       year: 2006,
       genre: "Drama",
-      image: "https://m.media-amazon.com/images/M/MV5BMjA5MTYzNDUxNV5BMl5BanBnXkFtZTcwMjI0MjM0MQ@@._V1_.jpg"
+      image: "https://upload.wikimedia.org/wikipedia/en/0/08/Rang_De_Basanti_poster.jpg"
     },
     {
       id: "laapta-ladies",
       title: "Laapta Ladies",
       year: 2023,
       genre: "Comedy",
-      image: "https://m.media-amazon.com/images/M/MV5BMTU0MjU5NjI5MF5BMl5BanBnXkFtZTcwMjM2MjQ1MQ@@._V1_.jpg"
+      image: "https://upload.wikimedia.org/wikipedia/en/5/52/Laapataa_Ladies_poster.jpg"
     },
     {
       id: "rockstar",
       title: "Rockstar",
       year: 2011,
       genre: "Drama",
-      image: "https://m.media-amazon.com/images/M/MV5BMTc0MjA1OTM0OV5BMl5BanBnXkFtZTcwNTkzMzQ5Ng@@._V1_.jpg"
+      image: "https://m.media-amazon.com/images/M/MV5BOTc3NzAxMjg4M15BMl5BanBnXkFtZTcwMDc2ODQwNw@@._V1_.jpg"
     },
     {
       id: "maharaja",
       title: "Maharaja",
       year: 2024,
       genre: "Action",
-      image: "https://m.media-amazon.com/images/M/MV5BMTU0MjU5NjI5MF5BMl5BanBnXkFtZTcwMjM2MjQ1MQ@@._V1_.jpg"
+      image: "https://upload.wikimedia.org/wikipedia/en/thumb/8/82/Maharaja_2024_film_poster.jpg/250px-Maharaja_2024_film_poster.jpg"
     },
     {
       id: "burning",
       title: "Burning",
       year: 2018,
       genre: "Drama",
-      image: "https://m.media-amazon.com/images/M/MV5BMTU0MjU5NjI5MF5BMl5BanBnXkFtZTcwMjM2MjQ1MQ@@._V1_.jpg"
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0L8_INVHvAHeu-P-WKFlSfCH1QXLTsBqpMQ&s"
     },
     {
       id: "sector-36",
       title: "Sector 36",
       year: 2023,
       genre: "Action",
-      image: "https://m.media-amazon.com/images/M/MV5BMTU0MjU5NjI5MF5BMl5BanBnXkFtZTcwMjM2MjQ1MQ@@._V1_.jpg"
+      image: "https://upload.wikimedia.org/wikipedia/en/d/d1/Sector_36.jpg"
     },
     {
       id: "memories-of-murder",
@@ -647,28 +647,28 @@ export default function CinemaContent() {
       title: "Ship of Theseus",
       year: 2012,
       genre: "Drama",
-      image: "https://m.media-amazon.com/images/M/MV5BMTU0MjU5NjI5MF5BMl5BanBnXkFtZTcwMjM2MjQ1MQ@@._V1_.jpg"
+      image: "https://upload.wikimedia.org/wikipedia/en/9/98/Ship_of_Theseus_domestic_release_poster.jpg"
     },
     {
       id: "masaan",
       title: "Masaan",
       year: 2015,
       genre: "Drama",
-      image: "https://m.media-amazon.com/images/M/MV5BMTU0MjU5NjI5MF5BMl5BanBnXkFtZTcwMjM2MjQ1MQ@@._V1_.jpg"
+      image: "https://upload.wikimedia.org/wikipedia/en/1/1c/Masaan_poster.jpg"
     },
     {
       id: "special-26",
       title: "Special 26",
       year: 2013,
       genre: "Crime",
-      image: "https://m.media-amazon.com/images/M/MV5BMTU0MjU5NjI5MF5BMl5BanBnXkFtZTcwMjM2MjQ1MQ@@._V1_.jpg"
+      image: "https://upload.wikimedia.org/wikipedia/en/7/7c/Special_26_poster.jpg"
     },
     {
       id: "1971",
       title: "1971",
       year: 2007,
       genre: "War",
-      image: "https://m.media-amazon.com/images/M/MV5BMTU0MjU5NjI5MF5BMl5BanBnXkFtZTcwMjM2MjQ1MQ@@._V1_.jpg"
+      image: "https://m.media-amazon.com/images/M/MV5BNDljZThkNjItMzFhYy00NDk1LWJlZTEtMTI4NzcxODU5NTQyXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
     }
   ]
 
@@ -692,7 +692,7 @@ export default function CinemaContent() {
       title: "Mirzapur",
       year: "2018-Present",
       genre: "Crime",
-      image: "https://m.media-amazon.com/images/M/MV5BN2NlNGYwYTUtMTM4YS00NzM0LWE5NzYtOTI3ZjA0NzBjMGE5XkEyXkFqcGdeQXVyMTI1NDAzMzM0._V1_.jpg"
+      image: "https://m.media-amazon.com/images/M/MV5BZTFjMzMxZTUtYTMyNy00OWNhLTk4ODQtNGI1NjI1NjJhMzc3XkEyXkFqcGc@._V1_.jpg"
     },
     {
       id: "breaking-bad",
@@ -720,70 +720,70 @@ export default function CinemaContent() {
       title: "Black Spot",
       year: "2017-2019",
       genre: "Crime",
-      image: "https://m.media-amazon.com/images/M/MV5BMTU0MjU5NjI5MF5BMl5BanBnXkFtZTcwMjM2MjQ1MQ@@._V1_.jpg"
+      image: "https://m.media-amazon.com/images/M/MV5BYjVjMmE4OGUtYjYyYS00N2YxLTkwN2ItYmY3ZTViZDc5NzZiXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
     },
     {
       id: "the-100",
       title: "The 100",
       year: "2014-2020",
       genre: "Sci-Fi",
-      image: "https://m.media-amazon.com/images/M/MV5BNjRiNmNjMmMtN2U2Yi00ODgxLTk4OTMtMmI2N2VmOTNkMjEwXkEyXkFqcGdeQXVyMTU0OTM5ODc1._V1_.jpg"
+      image: "https://m.media-amazon.com/images/M/MV5BNDdmZGYwOWEtN2FkZC00Y2ExLWJkY2UtNzFlODVlNzc3MGIzXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
     },
     {
       id: "katla",
       title: "Katla",
       year: "2021",
       genre: "Drama",
-      image: "https://m.media-amazon.com/images/M/MV5BMTU0MjU5NjI5MF5BMl5BanBnXkFtZTcwMjM2MjQ1MQ@@._V1_.jpg"
+      image: "https://m.media-amazon.com/images/M/MV5BZDhkNzAyNjctODQ0Yi00NDg3LThmOTctNDg4MTA0NGY4NDgxXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
     },
     {
       id: "behind-her-eyes",
       title: "Behind Her Eyes",
       year: "2021",
       genre: "Thriller",
-      image: "https://m.media-amazon.com/images/M/MV5BMTU0MjU5NjI5MF5BMl5BanBnXkFtZTcwMjM2MjQ1MQ@@._V1_.jpg"
+      image: "https://m.media-amazon.com/images/M/MV5BYTYzZjMzMTctNWZjYy00MGYxLWEzZTAtOTc5ZTcxNDAzNGUxXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
     },
     {
       id: "family-man",
       title: "The Family Man",
       year: "2019-Present",
       genre: "Action",
-      image: "https://m.media-amazon.com/images/M/MV5BMzRjZWVmMzItNTdmYS00ZTMxLTg4YzUtYzY0YzM0YzM0YzM0XkEyXkFqcGdeQXVyMTI1NDAzMzM0._V1_.jpg"
+      image: "https://m.media-amazon.com/images/M/MV5BMDc3NWMwNGMtYjc3Mi00NzU5LWFiYjgtMTJjZGE3ZmFiNzRjXkEyXkFqcGc@._V1_.jpg"
     },
     {
       id: "asur",
       title: "Asur",
       year: "2020-Present",
       genre: "Thriller",
-      image: "https://m.media-amazon.com/images/M/MV5BMTU0MjU5NjI5MF5BMl5BanBnXkFtZTcwMjM2MjQ1MQ@@._V1_.jpg"
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrUzmy6wHVQGrFminEtkNMLjzf1_qBsi9CfA&s"
     },
     {
       id: "kota-factory",
       title: "Kota Factory",
       year: "2019-Present",
       genre: "Drama",
-      image: "https://m.media-amazon.com/images/M/MV5BMTU0MjU5NjI5MF5BMl5BanBnXkFtZTcwMjM2MjQ1MQ@@._V1_.jpg"
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJXD7sqfPsi7obllbMe6q3D4hjZ-Jl_mKiug&s"
     },
     {
       id: "aspirants",
       title: "Aspirants",
       year: "2021-Present",
       genre: "Drama",
-      image: "https://m.media-amazon.com/images/M/MV5BMTU0MjU5NjI5MF5BMl5BanBnXkFtZTcwMjM2MjQ1MQ@@._V1_.jpg"
+      image: "https://m.media-amazon.com/images/M/MV5BMjE0NjJiYjYtNDUzZC00MGE2LTgzNDktZTVmOWI1Y2E2MDFkXkEyXkFqcGc@._V1_.jpg"
     },
     {
       id: "death-note",
       title: "Death Note",
       year: "2006-2007",
       genre: "Thriller",
-      image: "https://m.media-amazon.com/images/M/MV5BNjRiNmNjMmMtN2U2Yi00ODgxLTk4OTMtMmI2N2VmOTNkMjEwXkEyXkFqcGdeQXVyMTU0OTM5ODc1._V1_.jpg"
+      image: "https://m.media-amazon.com/images/M/MV5BYTgyZDhmMTEtZDFhNi00MTc4LTg3NjUtYWJlNGE5Mzk2NzMxXkEyXkFqcGc@._V1_.jpg"
     },
     {
       id: "house-of-secrets",
       title: "House of Secrets",
       year: "2021",
       genre: "Horror",
-      image: "https://m.media-amazon.com/images/M/MV5BMTU0MjU5NjI5MF5BMl5BanBnXkFtZTcwMjM2MjQ1MQ@@._V1_.jpg"
+      image: "https://m.media-amazon.com/images/M/MV5BZGNiNDQ1MTEtNzkyMS00NDQzLWFkNzYtMmZmODc5NjQ5YTRiXkEyXkFqcGc@._V1_.jpg"
     },
     {
       id: "squid-game",
@@ -797,77 +797,77 @@ export default function CinemaContent() {
       title: "Chernobyl",
       year: "2019",
       genre: "Drama",
-      image: "https://m.media-amazon.com/images/M/MV5BMTU0MjU5NjI5MF5BMl5BanBnXkFtZTcwMjM2MjQ1MQ@@._V1_.jpg"
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMKJ_XDkGejDZnmUXfNpG1D3oBR_pswjTp3Q&s"
     },
     {
       id: "wild-wild-country",
       title: "Wild Wild Country",
       year: "2018",
       genre: "Documentary",
-      image: "https://m.media-amazon.com/images/M/MV5BMTU0MjU5NjI5MF5BMl5BanBnXkFtZTcwMjM2MjQ1MQ@@._V1_.jpg"
+      image: "https://m.media-amazon.com/images/M/MV5BODY5ZWY0YzctOGNjMi00MzM0LWFjNDUtNDUxMzI0Mjc1N2Y1XkEyXkFqcGc@._V1_.jpg"
     },
     {
       id: "into-the-night",
       title: "Into the Night",
       year: "2020-2021",
       genre: "Sci-Fi",
-      image: "https://m.media-amazon.com/images/M/MV5BMTU0MjU5NjI5MF5BMl5BanBnXkFtZTcwMjM2MjQ1MQ@@._V1_.jpg"
+      image: "https://m.media-amazon.com/images/M/MV5BYmI5N2ZhMmMtZThkYS00ZmYyLWI0NWItNWI4ZDg0MjVkOTczXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
     },
     {
       id: "paatal-lok",
       title: "Paatal Lok",
       year: "2020",
       genre: "Crime",
-      image: "https://m.media-amazon.com/images/M/MV5BMTU0MjU5NjI5MF5BMl5BanBnXkFtZTcwMjM2MjQ1MQ@@._V1_.jpg"
+      image: "https://m.media-amazon.com/images/M/MV5BM2NlZDUwNzAtZTgyYi00YjhlLThhZTEtYTIxMzdjZjVkOTI3XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
     },
     {
       id: "bodyguard",
       title: "Bodyguard",
       year: "2018",
       genre: "Thriller",
-      image: "https://m.media-amazon.com/images/M/MV5BMTU0MjU5NjI5MF5BMl5BanBnXkFtZTcwMjM2MjQ1MQ@@._V1_.jpg"
+      image: "https://m.media-amazon.com/images/M/MV5BN2I0NWE2Y2QtM2I3YS00MzRlLThlMjAtMDViNGMwNjRhZjVlXkEyXkFqcGc@._V1_.jpg"
     },
     {
       id: "special-ops",
       title: "Special Ops",
       year: "2020-Present",
       genre: "Action",
-      image: "https://m.media-amazon.com/images/M/MV5BMTU0MjU5NjI5MF5BMl5BanBnXkFtZTcwMjM2MjQ1MQ@@._V1_.jpg"
+      image: "https://m.media-amazon.com/images/M/MV5BN2I0NWE2Y2QtM2I3YS00MzRlLThlMjAtMDViNGMwNjRhZjVlXkEyXkFqcGc@._V1_.jpg"
     },
     {
       id: "1899",
       title: "1899",
       year: "2022",
       genre: "Mystery",
-      image: "https://m.media-amazon.com/images/M/MV5BMTU0MjU5NjI5MF5BMl5BanBnXkFtZTcwMjM2MjQ1MQ@@._V1_.jpg"
+      image: "https://m.media-amazon.com/images/M/MV5BY2UyM2YwZTEtOTk5Zi00ODhkLTg2ZjctMzIxMTViZjFmN2Y4XkEyXkFqcGc@._V1_QL75_UY281_CR18,0,190,281_.jpg"
     },
     {
       id: "hellbound",
       title: "Hellbound",
       year: "2021",
       genre: "Horror",
-      image: "https://m.media-amazon.com/images/M/MV5BMTU0MjU5NjI5MF5BMl5BanBnXkFtZTcwMjM2MjQ1MQ@@._V1_.jpg"
+      image: "https://m.media-amazon.com/images/M/MV5BMjIwMDBlZjItNzMyMi00NjQwLWEzOTgtNGFmZTA0NThiMDhkXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
     },
     {
       id: "12-monkeys",
       title: "12 Monkeys",
       year: "2015-2018",
       genre: "Sci-Fi",
-      image: "https://m.media-amazon.com/images/M/MV5BMTU0MjU5NjI5MF5BMl5BanBnXkFtZTcwMjM2MjQ1MQ@@._V1_.jpg"
+      image: "https://m.media-amazon.com/images/M/MV5BMTkwOTcxNzMzOV5BMl5BanBnXkFtZTgwODYxNjg0ODE@._V1_FMjpg_UX1000_.jpg"
     },
     {
       id: "cobra-kai",
       title: "Cobra Kai",
       year: "2018-Present",
       genre: "Action",
-      image: "https://m.media-amazon.com/images/M/MV5BMTU0MjU5NjI5MF5BMl5BanBnXkFtZTcwMjM2MjQ1MQ@@._V1_.jpg"
+      image: "https://m.media-amazon.com/images/M/MV5BYjA3NDkwNzktNjJkYi00ODNhLWFhYzQtYzk5NjU4MDM0OWZmXkEyXkFqcGc@._V1_.jpg"
     },
     {
       id: "panchayat",
       title: "Panchayat",
       year: "2020-Present",
       genre: "Comedy",
-      image: "https://m.media-amazon.com/images/M/MV5BMTU0MjU5NjI5MF5BMl5BanBnXkFtZTcwMjM2MjQ1MQ@@._V1_.jpg"
+      image: "https://m.media-amazon.com/images/M/MV5BYzkwZGNkYTctZDc2MS00OWM2LWI2NTUtMTM2ZGMzMTY0N2Q1XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
     },
     {
       id: "got",
@@ -888,7 +888,28 @@ export default function CinemaContent() {
       title: "3 Body Problem",
       year: "2024",
       genre: "Sci-Fi",
-      image: "https://m.media-amazon.com/images/M/MV5BMTU0MjU5NjI5MF5BMl5BanBnXkFtZTcwMjM2MjQ1MQ@@._V1_.jpg"
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2wZzS-yiEU9dDrkRvsmHWWCOflwCqRtzeJQ&s"
+    },
+    {
+      id: "attack-on-titan",
+      title: "Attack on Titan",
+      year: "2013-2023",
+      genre: "Animation",
+      image: "https://m.media-amazon.com/images/M/MV5BNzc5MTczNDQtNDFjNi00ZDU5LWFkNzItOTE1NzQzMzdhNzMxXkEyXkFqcGdeQXVyNTgyNTA4MjM@._V1_.jpg"
+    },
+    {
+      id: "drive-to-survive",
+      title: "Drive to Survive",
+      year: "2019-Present",
+      genre: "Documentary",
+      image: "https://m.media-amazon.com/images/M/MV5BNTkyYzhiYzctZGRiOC00ODM1LTg0MDQtYzVmMzcyNTI5MDEwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
+    },
+    {
+      id: "the-test",
+      title: "The Test",
+      year: "2020-Present",
+      genre: "Documentary",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYmWVqY-EumARrpMPGnOX4RjSzvfZGWKsdJw&s"
     }
   ]
 
