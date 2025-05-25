@@ -125,4 +125,34 @@
     opacity: 1;
     transform: translateX(0);
   }
+}
+
+@media (max-width: 768px) {
+  .top-picks-row {
+    padding: 10px 10px;
+  }
+
+  .card-row {
+    padding-right: 20px; /* Add padding to show peek of next card */
+  }
+
+  .pick-card {
+    width: 220px; /* Slightly smaller width */
+    height: 180px; /* Adjusted height to maintain aspect ratio */
+  }
+}
+
+@media (max-width: 480px) {
+  .top-picks-row {
+    padding: 10px 5px;
+  }
+
+  .card-row {
+    padding-right: 15px;
+  }
+
+  .pick-card {
+    width: 200px; /* Even smaller for mobile */
+    height: 160px;
+  }
 } 

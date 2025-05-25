@@ -36,13 +36,15 @@ const SimpleBlogPage = () => {
         position: 'relative',
         zIndex: 10,
         textAlign: 'center',
-        maxWidth: '800px'
+        maxWidth: '800px',
+        width: '100%',
+        padding: '0 1rem'
       }}>
         {/* Title */}
         <h1 style={{
-          fontSize: '4rem',
+          fontSize: 'clamp(2rem, 5vw, 4rem)',
           fontWeight: 900,
-          marginTop:"100px",
+          marginTop: '100px',
           marginBottom: '2rem',
           background: 'linear-gradient(135deg, #e50914 0%, #ff6b35 50%, #e5e5e5 100%)',
           WebkitBackgroundClip: 'text',
@@ -70,11 +72,12 @@ const SimpleBlogPage = () => {
 
         {/* Main text */}
         <p style={{
-          fontSize: '1.2rem',
+          fontSize: 'clamp(1rem, 2vw, 1.2rem)',
           color: '#999',
           lineHeight: 1.6,
           marginBottom: '3rem',
-          animation: 'fadeInUp 1s ease-out 0.4s both'
+          animation: 'fadeInUp 1s ease-out 0.4s both',
+          padding: '0 1rem'
         }}>
           I don't know I'll be writing blogs soon or not. This was just to add the fleabag scene - You Should Write It Down
         </p>
@@ -87,7 +90,9 @@ const SimpleBlogPage = () => {
           boxShadow: '0 20px 60px rgba(0, 0, 0, 0.5)',
           border: '2px solid rgba(255, 255, 255, 0.1)',
           transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-          animation: 'fadeInUp 1s ease-out 0.6s both'
+          animation: 'fadeInUp 1s ease-out 0.6s both',
+          width: '100%',
+          maxWidth: '400px'
         }}
         onMouseEnter={(e) => {
           e.target.style.transform = 'translateY(-5px) scale(1.02)';
@@ -103,8 +108,8 @@ const SimpleBlogPage = () => {
             src="https://64.media.tumblr.com/78609a83ec6e8d54388efb6dcd2b2c40/tumblr_ppluuwcNOI1ta6mabo2_400.gifv"
             alt="Fleabag - You Should Write It Down"
             style={{
-              width: '400px',
-              height: '350px',
+              width: '100%',
+              height: 'auto',
               display: 'block',
               objectFit: 'cover'
             }}
@@ -126,20 +131,22 @@ const SimpleBlogPage = () => {
 
         @media (max-width: 768px) {
           h1 {
-            font-size: 2.5rem !important;
+            margin-top: 60px !important;
           }
           
-          p:nth-of-type(1) {
-            font-size: 1.2rem !important;
+          p {
+            padding: 0 0.5rem !important;
+          }
+        }
+
+        @media (max-width: 480px) {
+          h1 {
+            margin-top: 40px !important;
+            margin-bottom: 1.5rem !important;
           }
           
-          p:nth-of-type(2) {
-            font-size: 1rem !important;
-          }
-          
-          img {
-            width: 300px !important;
-            height: 225px !important;
+          p {
+            margin-bottom: 2rem !important;
           }
         }
       `}</style>

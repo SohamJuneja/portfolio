@@ -91,6 +91,20 @@ body {
   object-position: center 20%;
 }
 
+@media (max-width: 768px) {
+  .carousel-image {
+    object-fit: contain;
+    object-position: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-image {
+    object-fit: contain;
+    object-position: center;
+  }
+}
+
 .carousel-content {
   position: absolute;
   bottom: 0;
@@ -483,11 +497,19 @@ body {
     font-size: 2.5rem;
   }
   
+  .cinematic-timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 2rem;
+  }
+  
   .timeline-item.left,
   .timeline-item.right {
     padding-left: 0;
     padding-right: 0;
-    text-align: center;
+    text-align: left;
+    width: 100%;
   }
   
   .timeline-line {
@@ -507,5 +529,125 @@ body {
   .experience-card {
     margin-left: 5rem;
     max-width: none;
+    width: calc(100% - 5rem);
+  }
+
+  /* Remove hover effects for mobile */
+  .timeline-item:hover .timeline-icon,
+  .timeline-item:hover ~ .timeline-item .timeline-icon,
+  .timeline-item:hover + .timeline-item .timeline-icon {
+    filter: none;
+    transform: none;
+  }
+
+  .timeline-item:hover .timeline-marker {
+    transform: translateX(-50%);
+    box-shadow: none;
+  }
+
+  .experience-card:hover {
+    transform: none;
+    border-color: rgba(255, 255, 255, 0.1);
+    box-shadow: none;
+  }
+
+  .experience-card:hover .card-glow {
+    opacity: 0;
+  }
+
+  /* Add scroll-based animation */
+  .timeline-item.in-view .timeline-icon {
+    filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.8));
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+  }
+
+  .timeline-item.in-view .timeline-marker {
+    transform: translateX(-50%) scale(1.1);
+    box-shadow: 0 0 30px var(--color);
+    transition: all 0.3s ease;
+  }
+
+  .timeline-item.in-view .experience-card {
+    transform: translateY(-10px);
+    border-color: var(--color);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    transition: all 0.4s ease;
+  }
+
+  .timeline-item.in-view .experience-card .card-glow {
+    opacity: 0.1;
+    transition: opacity 0.4s ease;
+  }
+
+  .carousel-title {
+    font-size: 2.5rem;
+  }
+  
+  .carousel-description {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .cinematic-timeline {
+    padding-left: 1.5rem;
+  }
+  
+  .timeline-item.left,
+  .timeline-item.right {
+    padding-left: 0;
+    padding-right: 0;
+    text-align: left;
+    width: 100%;
+  }
+  
+  .timeline-line {
+    left: 1.5rem;
+  }
+  
+  .timeline-marker {
+    left: 1.5rem;
+    width: 50px;
+    height: 50px;
+  }
+  
+  .timeline-icon {
+    font-size: 1.25rem;
+  }
+  
+  .experience-card {
+    margin-left: 4rem;
+    max-width: none;
+    width: calc(100% - 4rem);
+    padding: 1.5rem;
+  }
+  
+  .experience-role {
+    font-size: 1.25rem;
+  }
+  
+  .experience-company {
+    font-size: 0.9rem;
+  }
+  
+  .experience-period {
+    font-size: 0.8rem;
+  }
+  
+  .experience-description {
+    font-size: 0.85rem;
+  }
+
+  .carousel-title {
+    font-size: 2rem;
+  }
+  
+  .carousel-description {
+    font-size: 0.9rem;
   }
 }

@@ -50,10 +50,10 @@ export default function Contact() {
       title: "Explore My Socials",
       description: "Connect with me across platforms",
       socials: [
-        { name: "LinkedIn", icon: <Linkedin size={18} />, url: "linkedin.com/in/yourprofile" },
-        { name: "Instagram", icon: <Instagram size={18} />, url: "@your_instagram" },
-        { name: "GitHub", icon: <Github size={18} />, url: "github.com/yourusername" },
-        { name: "Medium", icon: <Globe size={18} />, url: "medium.com/@yourusername" }
+        { name: "LinkedIn", icon: <Linkedin size={18} />, url: "https://www.linkedin.com/in/soham-juneja/ " },
+        { name: "Instagram", icon: <Instagram size={18} />, url: "https://www.instagram.com/soham__juneja/" },
+        { name: "GitHub", icon: <Github size={18} />, url: "https://github.com/SohamJuneja" },
+        { name: "Medium", icon: <Globe size={18} />, url: "https://medium.com/@junejasoham" }
       ]
     }
   ];
@@ -192,10 +192,16 @@ export default function Contact() {
                             ) : (
                               <div className="netflix-socials-container">
                                 {method.socials.map((social, index) => (
-                                  <div key={index} className="netflix-social-item">
+                                  <a 
+                                    key={index} 
+                                    href={social.url} 
+                                    target="_blank" 
+                                    rel="noopener noreferrer" 
+                                    className="netflix-social-item"
+                                  >
                                     <span className="netflix-social-icon">{social.icon}</span>
                                     <span className="netflix-social-name">{social.name}</span>
-                                  </div>
+                                  </a>
                                 ))}
                               </div>
                             )}

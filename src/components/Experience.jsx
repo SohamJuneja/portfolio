@@ -93,6 +93,7 @@ const Experience = () => {
   const [activeExperience, setActiveExperience] = useState(null);
   const [isVisible, setIsVisible] = useState(false);
   const timelineRef = useRef(null);
+  const timelineItemsRef = useRef([]);
 
   // Auto-advance carousel with pause on hover
   useEffect(() => {
@@ -119,6 +120,33 @@ const Experience = () => {
     if (timelineRef.current) {
       observer.observe(timelineRef.current);
     }
+
+    return () => observer.disconnect();
+  }, []);
+
+  // Intersection Observer for timeline items
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+          } else {
+            entry.target.classList.remove('in-view');
+          }
+        });
+      },
+      { 
+        threshold: 0.2,
+        rootMargin: '0px 0px -100px 0px'
+      }
+    );
+
+    timelineItemsRef.current.forEach((item) => {
+      if (item) {
+        observer.observe(item);
+      }
+    });
 
     return () => observer.disconnect();
   }, []);
@@ -207,6 +235,7 @@ const Experience = () => {
           {experiences.map((exp, index) => (
             <div 
               key={exp.id}
+              ref={el => timelineItemsRef.current[index] = el}
               className={`timeline-item ${index % 2 === 0 ? 'left' : 'right'}`}
               style={{ '--delay': `${index * 0.2}s`, '--color': exp.color }}
               onMouseEnter={() => setActiveExperience(exp.id)}

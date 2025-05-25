@@ -39,8 +39,8 @@ const netflixStyles = {
   featuredImg: {
     height: "100%",
     width: "100%",
-    objectFit: "cover",
-    objectPosition: "center 20%",
+    objectFit: "contain",
+    objectPosition: "center",
   },
   featuredContent: {
     position: "absolute",
@@ -150,7 +150,7 @@ const netflixStyles = {
   cardImg: {
     height: "100%",
     width: "100%",
-    objectFit: "cover",
+    objectFit: "contain",
     transition: "transform 0.3s",
   },
   cardOverlay: {
@@ -218,6 +218,9 @@ const getResponsiveStyles = () => {
 
   if (width <= 480) {
     return {
+      featured: {
+        height: "40vh",
+      },
       featuredContent: {
         maxWidth: "100%",
         padding: "1rem",
