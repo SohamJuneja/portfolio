@@ -6,6 +6,7 @@
   background-color: #000000;
   overflow: hidden;
   position: relative;
+  perspective: 1000px;
 }
 
 .logo-container {
@@ -15,10 +16,11 @@
   justify-content: center;
   width: 600px;
   height: 300px;
-  overflow: hidden;
+  overflow: visible;
   transform: scale(1);
   opacity: 1;
   transition: all 0.3s ease;
+  transform-origin: center center;
 }
 
 .logo-container::before {
@@ -270,6 +272,7 @@
 @keyframes zoom-in {
   0% {
     transform: scale(1);
+    opacity: 1;
   }
   100% {
     transform: scale(15);
