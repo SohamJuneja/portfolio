@@ -3,32 +3,32 @@ import './Experience.css';
 
 const experienceImages = [
   {
-    src: "/experience/dscWorkshop.jpg",
+    src: "/webpimages/dscWorkshop.webp",
     alt: "GDSC Workshop",
     title: "GDSC Open Source Workshop",
   },
   {
-    src: "/experience/anchoring.jpg",
+    src: "/webpimages/anchoring.webp",
     alt: "Leadership Excellence",
     title: "Electrothon - Day 1",
   },
   {
-    src: "/experience/electrothon.jpg",
+    src: "/webpimages/electrothon_1.webp",
     alt: "Innovation & Development",
     title: "Electrothon - Day 2",
   },
   {
-    src: "/experience/specfest.JPG",
+    src: "/webpimages/specfest.webp",
     alt: "Innovation & Development",
     title: "SpecFest",
   },
   {
-    src: "/experience/dscGroup.jpg",
+    src: "/webpimages/dscGroup.webp",
     alt: "Innovation & Development",
     title: "GDSC 2K25",
   },
   {
-    src: "/experience/specGroup.JPG",
+    src: "/webpimages/specGroup.webp",
     alt: "Innovation & Development",
     title: "SPEC 2K25",
   },
@@ -179,6 +179,7 @@ const Experience = () => {
                 src={image.src || "/placeholder.svg"}
                 alt={image.alt}
                 className="carousel-image"
+                loading="lazy"
               />
               <div className="carousel-content">
                 <h1 className="carousel-title netflix-title">{image.title}</h1>

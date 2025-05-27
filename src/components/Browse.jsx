@@ -34,12 +34,12 @@ const Browse = () => {
   const profiles = [
     {
       name: "Recruiter",
-      image: "/images/blue1.jpg",
-      backgroundGif: "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExbmZlaWNiam96c3NkMGpqazJ2dmlvZ25hdHFiYjRjZWlucmU1YjZiayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/DqvaPxbqDww0g/giphy.gif"
+      image: "/webpimages/blue1.webp",
+      backgroundGif: "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExbmZlaWNiam96c3NkMGpqazJ2dmlvZ25hdHFiYjRjZWlucmU5YjZiayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/DqvaPxbqDww0g/giphy.gif"
     },
     {
       name: "Explorer",
-      image: "/images/red1.jpg",
+      image: "/webpimages/red1.webp",
       backgroundGif: "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZGtsZzIxMnNleHRtYXY2YTdvbzY5MjFzcHdrbXJscHhneDJhcWI0cyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Pdog9xWci8zRNj40oO/giphy.gif"
     }
   ];

@@ -28,7 +28,7 @@ const NetflixTitle = () => {
       <div className={`logo-container ${isClicked ? 'animate' : ''}`}>
         {/* Replace with your actual logo path */}
         <img 
-          src="/logo-2.png" 
+          src="/webpimages/logo-2.webp" 
           alt="Your Logo" 
           className="logo-image"
         />

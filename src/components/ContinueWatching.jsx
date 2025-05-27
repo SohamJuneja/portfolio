@@ -37,7 +37,7 @@ const ContinueWatching = ({ profile }) => {
           <div 
             key={index} 
             className="pick-card" 
-            onClick={() => navigate(item.route)}
+            onClick={() => navigate(item.route, { state: { profileName: profile } })}
             style={{ animationDelay: `${index * 0.2}s` }}
           >
             <img src={item.imgSrc} alt={item.title} className="pick-image" />

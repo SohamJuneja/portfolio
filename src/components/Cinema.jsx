@@ -955,7 +955,12 @@ export default function CinemaContent() {
         <div style={netflixStyles.featuredGradientSide}></div>
 
         <div style={netflixStyles.featuredImage}>
-          <img src={featured.image || "/placeholder.svg"} alt={featured.title} style={netflixStyles.featuredImg} />
+          <img 
+            src={featured.image || "/placeholder.svg"} 
+            alt={featured.title} 
+            style={netflixStyles.featuredImg}
+            loading="lazy"
+          />
         </div>
 
         <div style={mergeStyles(netflixStyles.featuredContent, "featuredContent")}>
@@ -1008,7 +1013,12 @@ export default function CinemaContent() {
               onMouseEnter={() => setHoveredCard(item.id)}
               onMouseLeave={() => setHoveredCard(null)}
             >
-              <img src={item.image || "/placeholder.svg"} alt={item.title} style={netflixStyles.cardImg} />
+              <img
+                src={item.image}
+                alt={item.title}
+                style={netflixStyles.cardImg}
+                loading="lazy"
+              />
 
               <div
                 style={{

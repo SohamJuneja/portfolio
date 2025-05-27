@@ -10,7 +10,8 @@ const TopPicksRow = ({ profile }) => {
       {
         title: "Skills",
         imgSrc: "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExdDBhaTN3NGpzc2wwNDB4N3JkNzJ1anB4bmJ0bmlzcnNlNXVwYTNqbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/8IGuMMq3Aka8Zq9Kax/giphy.gif",
-        route: "/skills"
+        route: "/skills",
+        loading: "lazy"
       },
       {
         title: "Experience",
@@ -72,7 +73,7 @@ const TopPicksRow = ({ profile }) => {
           <div 
             key={index} 
             className="pick-card" 
-            onClick={() => navigate(pick.route)}
+            onClick={() => navigate(pick.route, { state: { profileName: profile } })}
             style={{ animationDelay: `${index * 0.2}s` }}
           >
             <img src={pick.imgSrc} alt={pick.title} className="pick-image" />

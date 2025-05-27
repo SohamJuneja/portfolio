@@ -2,15 +2,34 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FaHome, FaBriefcase, FaTools, FaProjectDiagram, FaEnvelope } from 'react-icons/fa';
 import './Navbar.css';
-import logo from '../../public/logo-2.png'; // Replace with your logo path
+import logo from '../../webpimages/logo-2.webp'; // Replace with your logo path
 
 const Navbar = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  // Use default image if not passed in location.state
-  const profileImage = location.state?.profileImage || '/images/blue1.jpg';
+  
+  // Determine profile image based on the current route or state
+  const getProfileImage = () => {
+    // Check state first
+    if (location.state?.profileName === 'Explorer') {
+      return '/webpimages/red1.webp';
+    } else if (location.state?.profileName === 'Recruiter') {
+      return '/webpimages/blue1.webp';
+    }
+
+    // Fallback to checking pathname if state is not available
+    if (location.pathname.startsWith('/profile/Explorer')) {
+      return '/webpimages/red1.webp';
+    } else if (location.pathname.startsWith('/profile/Recruiter')) {
+      return '/webpimages/blue1.webp';
+    } else {
+      return '/webpimages/blue1.webp'; // Default image
+    }
+  };
+
+  const profileImage = getProfileImage();
 
   useEffect(() => {
     const handleScroll = () => {

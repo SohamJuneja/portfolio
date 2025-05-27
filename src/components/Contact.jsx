@@ -161,8 +161,12 @@ export default function Contact() {
                 {/* Profile photo section */}
                 <div className="netflix-profile-section">
                   <div className="netflix-profile-photo">
-                    {/* Replace with your actual photo URL or keep using placeholder */}
-                    <img src="/images/dp1.jpg" alt="Profile" className="netflix-profile-image" />
+                    <img 
+                      src="/webpimages/dp1.webp" 
+                      alt="Profile" 
+                      className="netflix-profile-image"
+                      loading="lazy"
+                    />
                   </div>
                   <h2 className="netflix-title netflix-visual-title">Let's Connect</h2>
                 </div>
