@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FaHome, FaBriefcase, FaTools, FaProjectDiagram, FaEnvelope } from 'react-icons/fa';
 import './Navbar.css';
-import logo from '../../webpimages/logo-2.webp'; // Replace with your logo path
+import logo from '../../public/webpimages/logo-2.webp'; // Replace with your logo path
 
 const Navbar = () => {
   const location = useLocation();
