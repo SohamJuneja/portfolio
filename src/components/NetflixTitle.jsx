@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './NetflixTitle.css';
 
@@ -6,11 +6,36 @@ const NetflixTitle = () => {
   const [isClicked, setIsClicked] = useState(false);
   const [showInstruction, setShowInstruction] = useState(true);
   const navigate = useNavigate();
+  const audioRef = useRef(null);
+
+  useEffect(() => {
+    // Create and preload audio
+    const audio = new Audio('/sounds/click.mp3');
+    audio.preload = 'auto';
+    audioRef.current = audio;
+
+    // Clean up on unmount
+    return () => {
+      if (audioRef.current) {
+        audioRef.current.pause();
+        audioRef.current = null;
+      }
+    };
+  }, []); // Empty dependency array means this runs once on mount
 
   const handleClick = () => {
     if (!isClicked) {
       setIsClicked(true);
       setShowInstruction(false);
+      
+      // Add delay to sync with animation
+      setTimeout(() => {
+        // Play the sound using the ref
+        if (audioRef.current) {
+          audioRef.current.currentTime = 0; // Rewind to the start
+          audioRef.current.play().catch(error => console.error("Audio playback failed:", error));
+        }
+      }, 800); // 800ms delay to sync with brush animation
     }
   };
 
