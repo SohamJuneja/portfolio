@@ -79,7 +79,7 @@ const NetflixTitle = () => {
       
       {showInstruction && (
         <div className="click-instruction">
-          Click to initiate Lights, Camera, and Action
+          Click to initiate Lights, Camera and Action
         </div>
       )}
     </div>
