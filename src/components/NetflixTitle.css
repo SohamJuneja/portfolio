@@ -193,11 +193,11 @@
 /* Click instruction */
 .click-instruction {
   position: absolute;
-  bottom: 50px;
+  bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
   color: #ffffff;
-  font-size: 20px;
+  font-size: clamp(16px, 4vw, 20px);
   font-family: 'Bebas Neue', Arial, sans-serif;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -206,6 +206,8 @@
   z-index: 20;
   text-align: center;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  width: 90%;
+  max-width: 400px;
 }
 
 /* Animations */
@@ -308,5 +310,17 @@
   .click-instruction {
     font-size: 16px;
     bottom: 10px;
+  }
+}
+
+/* Add media query for mobile devices */
+@media screen and (max-height: 700px) {
+  .click-instruction {
+    bottom: 10px;
+    font-size: 14px;
+  }
+  
+  .netflix-container {
+    padding-bottom: 40px;
   }
 }
