@@ -24,11 +24,6 @@ const TopPicksRow = ({ profile }) => {
         route: "/projects"
       },
       {
-        title: "Certifications",
-        imgSrc: "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExd3Noa2ZkazB5YzRibjh2dTM0ZDd0a2ZoeXJxOHUxM2NsYmowMzl0ZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/efZjCJphXs8mNuB2xd/giphy.gif",
-        route: "/certifications"
-      },
-      {
         title: "Blogs",
         imgSrc: "https://64.media.tumblr.com/78609a83ec6e8d54388efb6dcd2b2c40/tumblr_ppluuwcNOI1ta6mabo2_400.gifv",
         route: "/blogs"
@@ -55,11 +50,6 @@ const TopPicksRow = ({ profile }) => {
         imgSrc: "https://64.media.tumblr.com/78609a83ec6e8d54388efb6dcd2b2c40/tumblr_ppluuwcNOI1ta6mabo2_400.gifv",
         route: "/blogs"
       },
-      {
-        title: "Certifications",
-        imgSrc: "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExd3Noa2ZkazB5YzRibjh2dTM0ZDd0a2ZoeXJxOHUxM2NsYmowMzl0ZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/efZjCJphXs8mNuB2xd/giphy.gif",
-        route: "/certifications"
-      }
     ]
   };
 

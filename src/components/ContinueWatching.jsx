@@ -8,6 +8,11 @@ const ContinueWatching = ({ profile }) => {
   const continueWatchingConfig = {
     Recruiter: [
       {
+        title: "Certifications",
+        imgSrc: "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExd3Noa2ZkazB5YzRibjh2dTM0ZDd0a2ZoeXJxOHUxM2NsYmowMzl0ZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/efZjCJphXs8mNuB2xd/giphy.gif",
+        route: "/certifications"
+      },
+      {
         title: "Contact Me",
         imgSrc: "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExd2FzcnM0NW42c3EwazY2aXg5dTlwYWxtczQ2dm1zZGNseGtieDh5YSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3oFyD4xKncK6ptR7qg/giphy.gif",
         route: "/contact-me"
@@ -18,6 +23,12 @@ const ContinueWatching = ({ profile }) => {
         title: "Experience",
         imgSrc: "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZWQ3c3RnZjF2cjJseGI5Z3k2cmI5ZWJqZ3BqeTZtc243bWE2cW41MSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xT5LMIPMieHhqReXvO/giphy.gif",
         route: "/work-experience"
+      },
+      ,
+      {
+        title: "Certifications",
+        imgSrc: "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExd3Noa2ZkazB5YzRibjh2dTM0ZDd0a2ZoeXJxOHUxM2NsYmowMzl0ZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/efZjCJphXs8mNuB2xd/giphy.gif",
+        route: "/certifications"
       },
       {
         title: "Contact Me",
