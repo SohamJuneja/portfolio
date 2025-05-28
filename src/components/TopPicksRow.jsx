@@ -8,15 +8,15 @@ const TopPicksRow = ({ profile }) => {
   const topPicksConfig = {
     Recruiter: [
       {
+        title: "Experience",
+        imgSrc: "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZWQ3c3RnZjF2cjJseGI5Z3k2cmI5ZWJqZ3BqeTZtc243bWE2cW41MSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xT5LMIPMieHhqReXvO/giphy.gif",
+        route: "/work-experience"
+      },
+      {
         title: "Skills",
         imgSrc: "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExdDBhaTN3NGpzc2wwNDB4N3JkNzJ1anB4bmJ0bmlzcnNlNXVwYTNqbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/8IGuMMq3Aka8Zq9Kax/giphy.gif",
         route: "/skills",
         loading: "lazy"
-      },
-      {
-        title: "Experience",
-        imgSrc: "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZWQ3c3RnZjF2cjJseGI5Z3k2cmI5ZWJqZ3BqeTZtc243bWE2cW41MSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xT5LMIPMieHhqReXvO/giphy.gif",
-        route: "/work-experience"
       },
       {
         title: "Projects",
