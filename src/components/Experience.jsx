@@ -57,7 +57,7 @@ const experiences = [
   },
   {
     id: 3,
-    role: "Volunteer",
+    role: "Executive",
     company: "Google Developer Student Clubs",
     period: "Jan 2024 – Present",
     type: "Development",
@@ -223,13 +223,16 @@ const Experience = () => {
 
       {/* Cinematic Experience Timeline */}
       <div className="experience-content-container">
-        <div className="timeline-header">
-          <h2 className="section-title">MY JOURNEY</h2>
+        <div className="timeline-header fade-in-section">
+          <h2 className="section-title">
+            MY JOURNEY
+            <div className="title-underline"></div>
+          </h2>
         </div>
 
         <div 
           ref={timelineRef}
-          className={`cinematic-timeline ${isVisible ? 'animate' : ''}`}
+          className={`cinematic-timeline fade-in-section ${isVisible ? 'animate' : ''}`}
         >
           <div className="timeline-line"></div>
           

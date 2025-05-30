@@ -5,10 +5,77 @@
   color: #fff;
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
   position: relative;
   width: 100%;
   overflow: hidden;
   padding: 40px 20px 20px 20px;
+}
+
+/* Subtle vignette effect */
+.profile-page::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at center,
+    transparent 0%,
+    transparent 60%,
+    rgba(0, 0, 0, 0.3) 100%
+  );
+  pointer-events: none;
+  z-index: 2;
+}
+
+
+
+/* Enhanced content sections with better spacing */
+.content-sections {
+  background: linear-gradient(
+    180deg,
+    #141414 0%,
+    #0d0d0d 50%,
+    #141414 100%
+  );
+  min-height: 50vh;
+  padding-top: 2rem;
+  position: relative;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.content-sections::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    #e50914 20%,
+    #e50914 80%,
+    transparent 100%
+  );
+}
+
+.content-sections::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 20px;
+  background: linear-gradient(
+    180deg,
+    rgba(229, 9, 20, 0.2) 0%,
+    transparent 100%
+  );
+  filter: blur(8px);
 }
 
 .profile-page::before {
@@ -21,6 +88,15 @@
     padding-bottom: 5rem;
     align-items: center;
     justify-content: center;
+    background-attachment: scroll;
+  }
+  
+  .content-sections {
+    padding-top: 1rem;
+  }
+  
+  .content-sections::before {
+    display: none;
   }
 }
 

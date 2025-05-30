@@ -17,10 +17,16 @@ const ProfilePage = () => {
         className="profile-page"
         style={{ backgroundImage: `url(${backgroundGif})` }}
       >
+        {/* Keep only bottom gradient for text readability */}
+
         <ProfileBanner profileType={profileType} />
       </div>
-      <TopPicksRow profile={profileName} />
-      <ContinueWatching profile={profileName} />
+      
+      {/* Content sections with enhanced styling */}
+      <div className="content-sections">
+        <TopPicksRow profile={profileName} />
+        <ContinueWatching profile={profileName} />
+      </div>
     </>
   );
 };

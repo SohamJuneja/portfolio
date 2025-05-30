@@ -56,7 +56,7 @@ const TopPicksRow = ({ profile }) => {
   const topPicks = topPicksConfig[profile] || topPicksConfig.Recruiter;
 
   return (
-    <div className="top-picks-row">
+    <div className="top-picks-row fade-in-section">
       <h2 className="row-title">Today's Top Picks for {profile}</h2>
       <div className="card-row">
         {topPicks.map((pick, index) => (

@@ -10,14 +10,16 @@
   background-repeat: no-repeat;
 }
 
-/* Desktop background */
+/* Desktop background - commented out for now */
+/* 
 .profile-banner[data-profile="recruiter"] {
-  /* background-image: url("https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExbmZlaWNiam96c3NkMGpqazJ2dmlvZ25hdHFiYjRjZWlucmU5YjZiayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/DqvaPxbqDww0g/giphy.gif"); */
+  background-image: url("https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExbmZlaWNiam96c3NkMGpqazJ2dmlvZ25hdHFiYjRjZWlucmU5YjZiayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/DqvaPxbqDww0g/giphy.gif");
 }
 
 .profile-banner[data-profile="explorer"] {
-  /* background-image: url("https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZGtsZzIxMnNleHRtYXY2YTdvbzY5MjFzcHdrbXJscHhneDJhcWI0cyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Pdog9xWci8zRNj40oO/giphy.gif"); */
+  background-image: url("https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZGtsZzIxMnNleHRtYXY2YTdvbzY5MjFzcHdrbXJscHhneDJhcWI0cyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Pdog9xWci8zRNj40oO/giphy.gif");
 }
+*/
 
 /* Tablet background */
 @media (max-width: 768px) {
@@ -49,8 +51,8 @@
   font-size: 3.3rem;
   font-weight: 800;
   margin-bottom: 0.7rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8),
-               0 0 20px rgba(0, 0, 0, 0.5);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0),
+               0 0 20px rgba(0, 0, 0, 0.1);
   letter-spacing: 0.5px;
   font-family: 'Bebas Neue', sans-serif;
 }
@@ -59,8 +61,8 @@
   font-size: 1.2rem;
   line-height: 1.6;
   margin-bottom: 1rem;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8),
-               0 0 15px rgba(0, 0, 0, 0.5);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1),
+               0 0 15px rgba(0, 0, 0, 0.1);
   font-weight: 550;
 }
 
@@ -104,5 +106,59 @@
   .banner-buttons {
     flex-direction: column;
     gap: 0.5rem;
+  }
+}
+
+/* Mobile-only scroll indicator */
+.scroll-indicator-mobile {
+  display: none;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 3;
+  opacity: 0.7;
+}
+
+.scroll-text {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 5px;
+  font-weight: 400;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.scroll-arrow {
+  width: 20px;
+  height: 20px;
+  margin: 0 auto;
+}
+
+.arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 8px solid rgba(255, 255, 255, 0.8);
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-5px);
+  }
+  60% {
+    transform: translateY(-3px);
+  }
+}
+
+/* Show scroll indicator only on mobile devices */
+@media (max-width: 768px) {
+  .scroll-indicator-mobile {
+    display: block;
   }
 } 

@@ -40,9 +40,13 @@ const ContinueWatching = ({ profile }) => {
 
   const continueWatching = continueWatchingConfig[profile] || continueWatchingConfig.Recruiter;
 
+  const getSectionTitle = (profileName) => {
+    return profileName === 'Recruiter' ? "Recruiter's List" : "Explorer's List";
+  };
+
   return (
-    <div className="continue-watching-row">
-      <h2 className="row-title">Continue Watching for {profile}</h2>
+    <div className="continue-watching-row fade-in-section">
+      <h2 className="row-title">{getSectionTitle(profile)}</h2>
       <div className="card-row">
         {continueWatching.map((item, index) => (
           <div 

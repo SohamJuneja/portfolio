@@ -21,7 +21,6 @@ const ProfileBanner = ({ profileType = 'recruiter' }) => {
   const handleLinkedinClick = () => {
     window.open(bannerData.linkedinLink, '_blank');
   };
-
   return (
     <div className="profile-banner">
       <div className="banner-content">
@@ -30,6 +29,14 @@ const ProfileBanner = ({ profileType = 'recruiter' }) => {
         <div className="banner-buttons">
           <PlayButton onClick={handlePlayClick} label="Resume" />
           <MoreInfoButton onClick={handleLinkedinClick} label="Linkedin" />
+        </div>
+      </div>
+      
+      {/* Mobile-only scroll indicator */}
+      <div className="scroll-indicator-mobile">
+        <div className="scroll-text">Scroll for more</div>
+        <div className="scroll-arrow">
+          <div className="arrow-down"></div>
         </div>
       </div>
     </div>
