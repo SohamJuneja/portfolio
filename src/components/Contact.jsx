@@ -217,10 +217,6 @@ export default function Contact() {
                     </div>
                   ))}
                 </div>
-                
-                <div className="netflix-tagline">
-                  <p>Let's create something amazing together.</p>
-                </div>
               </div>
             </div>
           </div>
