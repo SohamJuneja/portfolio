@@ -3,10 +3,9 @@
 import { motion } from "framer-motion"
 import "./Projects.css"
 import { FaReact, FaNodeJs, FaEthereum, FaPython } from "react-icons/fa"
-import { SiTypescript, SiMongodb, SiSolidity, SiElectron, SiWebpack, SiArchlinux, SiHtml5, SiCss3, SiJavascript, SiTensorflow, SiDocker, SiLinux, SiTailwindcss, SiVite, SiExpress, SiCplusplus, SiC, SiAssemblyscript, SiGnu } from "react-icons/si"
+import { SiTypescript, SiMongodb, SiSolidity, SiElectron, SiWebpack, SiArchlinux, SiHtml5, SiCss3, SiJavascript, SiTensorflow, SiDocker, SiLinux, SiTailwindcss, SiVite, SiExpress, SiCplusplus, SiC, SiAssemblyscript, SiGnu, SiBlockchaindotcom } from "react-icons/si"
 
-const Projects = () => {
-  const getTechIcon = (tech) => {
+const Projects = () => {  const getTechIcon = (tech) => {
     const iconMap = {
       "React": <FaReact />,
       "TypeScript": <SiTypescript />,
@@ -18,6 +17,7 @@ const Projects = () => {
       "Webpack": <SiWebpack />,
       "Arch Linux": <SiArchlinux />,
       "HTML5": <SiHtml5 />,
+      "HTML": <SiHtml5 />,
       "CSS": <SiCss3 />,
       "JavaScript": <SiJavascript />,
       "Python": <FaPython />,
@@ -30,7 +30,8 @@ const Projects = () => {
       "C": <SiC />,
       "C++": <SiCplusplus />,
       "Assembly": <SiAssemblyscript />,
-      "GCC": <SiGnu />
+      "GCC": <SiGnu />,
+      "Blockchain": <SiBlockchaindotcom />
     }
     return iconMap[tech] || null
   }
@@ -101,17 +102,34 @@ const Projects = () => {
       year: 2021,
     },
   ]
-
   return (
     <div className="projects-container">
-      <div className="projects-grid">
-        {projects.map((project) => (
-          <motion.div
+      {/* Main Header */}      <motion.div 
+        className="netflix-header"
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+      >
+        <h1>MY CREATIONS</h1>
+        <p>Building innovative solutions that shape the digital future</p>
+      </motion.div>
+
+      <motion.div 
+        className="projects-grid"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.6, delay: 0.3 }}
+      >
+        {projects.map((project) => (          <motion.div
             className="project-card"
             key={project.id}
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: project.id * 0.1 }}
+            transition={{ duration: 0.6, delay: project.id * 0.1 }}
+            whileHover={{
+              scale: 1.08,
+              transition: { duration: 0.3 }
+            }}
           >
             <div className="project-poster">
               <img src={project.image} alt={project.title} />
@@ -130,9 +148,8 @@ const Projects = () => {
                 ))}
               </div>
             </div>
-          </motion.div>
-        ))}
-      </div>
+          </motion.div>        ))}
+      </motion.div>
     </div>
   )
 }
