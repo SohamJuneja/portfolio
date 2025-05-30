@@ -38,7 +38,7 @@ body {
     min-height: 100vh;
     position: relative;
     z-index: 1;
-    padding-top: 0;
+    padding-top: 0; /* Ensure no extra space at the top */
     width: 100%;
 }
 
@@ -51,9 +51,9 @@ body {
 .hero-carousel {
     position: relative;
     overflow: hidden;
-    height: 77vh !important;
+    height: 77vh !important; /* Maintain existing height */
     margin-bottom: 2rem;
-    margin-top: 0;
+    margin-top: 0; /* Ensure carousel is at the top */
     z-index: 1;
     width: 100%;
 }
@@ -79,11 +79,12 @@ body {
     transform: scale(1);
 }
 
+/* Ensure image covers the slide without extra space */
 .carousel-image {
     width: 100%;
-    height: 100% !important;
-    object-fit: cover;
-    object-position: center center;
+    height: 100% !important; /* Important to override other styles if necessary */
+    object-fit: cover; /* Cover ensures the image fills the container */
+    object-position: center center; /* Center the image */
 }
 
 .carousel-content {
@@ -190,12 +191,13 @@ body {
 .achievements-container {
     padding: 20px 20px 20px;
     min-height: auto;
-    background-color: #141414;
+    background-color: #141414; /* Keep dark background */
     color: white;
     font-family: "Roboto", sans-serif;
+    /* Apply a subtle gradient similar to other premium pages */
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9) 0%, rgba(20, 20, 20, 1) 100%);
     position: relative;
-    overflow: visible;
+    overflow: visible; /* Changed from hidden to visible if elements need to pop out */
 }
 
 .achievements-container::before {
@@ -204,45 +206,94 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100px;
+    height: 100px; /* Standard height for top gradient */
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
-    z-index: 1;
+    z-index: 1; /* Ensure it's above background but below content */
 }
 
 .netflix-header {
-    margin-bottom: 40px;
+    margin-bottom: 40px; /* Existing margin */
+    text-align: center; /* Center the title like in Projects */
+    position: relative; /* For z-index stacking */
+    z-index: 2; /* Ensure header is above the ::before pseudo-element */
 }
 
 .achievements-title {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #e50914;
-    margin: 0;
+    font-family: "Bebas Neue", sans-serif; /* Consistent font */
+    font-size: 3.5rem; /* Larger, more impactful title */
+    color: var(--netflix-white); /* White title */
+    letter-spacing: 2px; /* Letter spacing for Bebas Neue */
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+    position: relative;
+    display: inline-block; /* To allow ::after positioning */
+    font-weight: 400; /* Standard weight for Bebas Neue */
 }
+
+.achievements-title::after {
+    content: "";
+    position: absolute;
+    bottom: -10px; /* Position underline below title */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%; /* Underline width relative to title */
+    height: 4px; /* Thicker underline */
+    background: linear-gradient(90deg, transparent 0%, var(--netflix-red) 50%, transparent 100%);
+    border-radius: 2px;
+    box-shadow: 0 0 15px rgba(229, 9, 20, 0.4); /* Glow for the underline */
+}
+
 
 .achievements-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
+    gap: 25px; /* Slightly increased gap */
     padding: 10px 0;
+    position: relative; /* For z-index stacking */
+    z-index: 2; /* Ensure grid is above the ::before pseudo-element */
 }
 
 .achievement-card {
-    background: #181818;
+    background: linear-gradient(145deg, #1a1a1a 0%, #141414 50%, #0d0d0d 100%); /* Similar to project-card */
     border-radius: 12px;
     overflow: hidden;
-    transition: all 0.3s ease;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 
+        0 8px 25px rgba(0, 0, 0, 0.4), /* Similar to project-card */
+        0 4px 8px rgba(0, 0, 0, 0.2); /* Similar to project-card */
     position: relative;
-    height: 425px;
+    /* height: 450px; Let height be determined by content or use min-height */
+    min-height: 450px; /* Ensure a minimum height */
     display: flex;
     flex-direction: column;
+    border: 1px solid rgba(255, 255, 255, 0.05); /* Similar to project-card */
 }
 
 .achievement-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(229, 9, 20, 0.6);
-    z-index: 2;
+    transform: translateY(-12px) scale(1.05); /* Matches project-card hover */
+    border-color: rgba(229, 9, 20, 0.6); /* Matches project-card hover */
+    box-shadow: 
+        0 20px 40px rgba(229, 9, 20, 0.3), /* Matches project-card hover */
+        0 12px 25px rgba(0, 0, 0, 0.4), /* Matches project-card hover */
+        0 0 30px rgba(229, 9, 20, 0.2); /* Matches project-card hover */
+    z-index: 10; 
+}
+
+/* Shimmer effect on hover - matches project-card */
+.achievement-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%; /* Start off-screen */
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent); /* Subtle white shimmer */
+    transition: left 0.6s ease; /* Smooth transition for shimmer */
+    z-index: 1; /* Above background, below content */
+}
+
+.achievement-card:hover::before {
+    left: 100%; /* Move across the card on hover */
 }
 
 .achievement-poster {
@@ -250,7 +301,8 @@ body {
     width: 100%;
     padding-top: 56.25%; /* 16:9 Aspect Ratio */
     overflow: hidden;
-    border-radius: 12px 12px 0 0;
+    border-radius: 12px 12px 0 0; /* Rounded top corners */
+    flex-shrink: 0; /* Prevent shrinking */
 }
 
 .achievement-poster img {
@@ -260,108 +312,180 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.3s ease;
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), filter 0.4s ease; 
+    filter: brightness(0.9); /* Slightly darken image, similar to project-poster img */
 }
 
 .achievement-card:hover .achievement-poster img {
-    transform: scale(1.1);
+    transform: scale(1.15); /* Matches project-card image hover */
+    filter: brightness(1.1); /* Matches project-card image hover */
 }
 
-.achievement-overlay {
+.achievement-overlay { 
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 100%);
-    transition: opacity 0.3s ease;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(20,20,20,0.6) 70%, rgba(20,20,20,0.9) 100%); /* Matches project-overlay */
+    transition: opacity 0.4s ease;
+    opacity: 1; 
 }
 
 .achievement-card:hover .achievement-overlay {
-    opacity: 0.5;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(229,9,20,0.1) 30%, rgba(20,20,20,0.8) 100%); /* Matches project-overlay hover */
 }
 
+
 .achievement-info {
-    padding: 20px;
-    background: linear-gradient(to top, #181818 0%, rgba(24, 24, 24, 0.9) 100%);
-    border-radius: 0 0 12px 12px;
-    flex: 1;
+    padding: 25px; /* Match project-info padding */
+    background: linear-gradient(to top, #1a1a1a 0%, rgba(26, 26, 26, 0.95) 100%); /* Match project-info background */
+    border-radius: 0 0 12px 12px; 
+    flex-grow: 1; /* Allow info section to grow and fill available space */
     display: flex;
     flex-direction: column;
+    justify-content: space-between; /* This will push category to the bottom if description has flex-grow: 1 */
+    position: relative; 
+    z-index: 2; /* Ensure info content is above the shimmer */
 }
+
+/* Optional: Add a subtle glow to info section on card hover, similar to project-info::before */
+.achievement-info::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(145deg, rgba(229, 9, 20, 0.02) 0%, transparent 50%, rgba(229, 9, 20, 0.05) 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    border-radius: 0 0 12px 12px;
+    z-index: -1; /* Behind the info content */
+}
+
+.achievement-card:hover .achievement-info::before {
+    opacity: 1;
+}
+
 
 .achievement-header {
     display: flex;
     align-items: center;
-    gap: 10px;
-    margin-bottom: 0px;
+    gap: 12px; /* Increased gap */
+    margin-bottom: 8px; /* Adjusted margin */
 }
 
 .achievement-icon {
-    font-size: 1.5rem;
-    color: #e50914;
-    transition: color 0.3s ease;
+    font-size: 1.6rem; 
+    color: var(--netflix-red);
+    transition: color 0.3s ease, transform 0.3s ease; 
+    filter: drop-shadow(0 0 5px rgba(229, 9, 20, 0.5)); 
 }
 
 .achievement-card:hover .achievement-icon {
-    color: #ff0f1a;
+    color: #ff3b47; 
+    transform: scale(1.1); 
 }
 
 .achievement-year {
     font-size: 0.9rem;
-    color: var(--netflix-light-gray);
+    color: var(--netflix-medium-gray); /* Consistent medium gray */
+    font-weight: 500; /* Slightly bolder */
 }
 
 .achievement-title {
-    margin: 0 0 10px 0;
-    font-size: 1.2rem;
-    font-weight: bold;
+    margin: 0 0 12px 0; 
+    font-size: 1.3rem; 
+    font-weight: 700; 
     color: #fff;
-    transition: color 0.3s ease;
+    transition: all 0.4s ease; /* Match project-title transition */
+    font-family: "Bebas Neue", sans-serif; /* Match project-title font */
+    letter-spacing: 1px; /* Match project-title spacing */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); /* Match project-title shadow */
+    position: relative;
+    z-index: 2; /* Ensure title is above info pseudo-element */
+    flex-shrink: 0; /* Prevent title from shrinking */
 }
 
 .achievement-card:hover .achievement-title {
-    color: #e50914;
+    color: var(--netflix-white); /* Keep white or change to var(--netflix-red) if preferred */
+    transform: translateY(-2px); /* Subtle lift */
+    text-shadow: 
+        2px 2px 8px rgba(0, 0, 0, 0.7),
+        0 0 15px rgba(229, 9, 20, 0.3); /* Enhanced shadow on hover */
 }
 
 .achievement-description {
     margin: 0 0 15px 0;
-    font-size: 0.9rem;
-    color: #b3b3b3;
-    line-height: 1.4;
-    flex: 1;
-    overflow-y: auto;
+    font-size: 0.95rem; /* Slightly larger description */
+    color: var(--netflix-light-gray); /* Lighter gray for better readability */
+    line-height: 1.5; 
+    flex-grow: 1; /* Allows description to take up available space, pushing categories down */
+    overflow-y: auto; /* Add scroll for long descriptions if needed, but prefer to manage height */
+    position: relative; /* Ensure z-index works */
+    z-index: 2; /* Ensure description is above info pseudo-element */
+    /* To prevent text cutoff and ensure consistent height for tags, 
+       you might need to limit the description height or lines. 
+       For now, flex-grow should help, but if tags are still uneven, 
+       consider a fixed height or max-height for description. */
 }
 
 .achievement-category {
     display: flex;
+    flex-wrap: wrap; /* Allow tags to wrap */
     gap: 8px;
-    margin-top: auto;
-    padding-top: 10px;
+    margin-top: auto; /* This is key: Pushes to the bottom of the flex container (.achievement-info) */
+    padding-top: 12px; 
+    position: relative; /* Ensure z-index works */
+    z-index: 2; /* Ensure tags are above info pseudo-element */
+    flex-shrink: 0; /* Prevent category section from shrinking */
 }
 
 .category-tag {
-    background: #2f2f2f;
-    color: #b3b3b3;
-    padding: 6px 12px;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    transition: all 0.2s ease;
+    background: linear-gradient(145deg, #2f2f2f 0%, #252525 100%); /* Match project-tag */
+    color: var(--netflix-light-gray);  /* Match project-tag */
+    padding: 8px 14px; /* Match project-tag */
+    border-radius: 25px; /* Match project-tag */
+    font-size: 0.85rem; /* Match project-tag */
+    font-weight: 500; 
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); /* Match project-tag */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Match project-tag */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Match project-tag */
 }
 
 .achievement-card:hover .category-tag {
-    background: #e50914;
+    background: linear-gradient(145deg, var(--netflix-red) 0%, #cc0812 100%); /* Match project-tag hover */
     color: white;
-    transform: translateY(-2px);
+    transform: translateY(-3px) scale(1.05); /* Match project-tag hover */
+    border-color: rgba(229, 9, 20, 0.6); /* Match project-tag hover */
+    box-shadow: 
+        0 6px 15px rgba(229, 9, 20, 0.4), /* Match project-tag hover */
+        0 2px 8px rgba(0, 0, 0, 0.3); /* Match project-tag hover */
 }
+
+/* Add styles for tag icons if you plan to add them */
+.category-tag svg {
+  font-size: 1.1rem;
+  color: var(--netflix-red);
+  transition: all 0.4s ease;
+  filter: drop-shadow(0 0 4px rgba(229, 9, 20, 0.3));
+}
+
+.achievement-card:hover .category-tag svg {
+  color: var(--netflix-white);
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.3));
+}
+
 
 @media (max-width: 768px) {
     .hero-carousel {
-        height: 40vh;
+        height: 50vh; /* Adjusted for smaller screens */
     }
 
     .achievements-title {
-        font-size: 2rem;
+        font-size: 2.8rem; /* Adjusted for smaller screens */
     }
 
     .achievements-grid {
@@ -369,17 +493,18 @@ body {
     }
 
     .achievement-card {
-        height: 450px;
+        /* height: auto; Let height be determined by content or use min-height */
+        min-height: 430px; /* Ensure a minimum height, adjust as needed */
     }
 }
 
 @media (max-width: 480px) {
     .hero-carousel {
-        height: 35vh;
+        height: 40vh; /* Adjusted for mobile */
     }
 
     .achievements-title {
-        font-size: 1.8rem;
+        font-size: 2.2rem; /* Adjusted for mobile */
     }
 
     .achievements-grid {
@@ -387,7 +512,8 @@ body {
     }
 
     .achievement-card {
-        height: 400px;
+        /* height: auto; Let height be determined by content or use min-height */
+        min-height: 400px; /* Ensure a minimum height, adjust as needed */
     }
 }
 
@@ -416,4 +542,3 @@ body {
 .medal {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M7.21 15 2.66 7.14a2 2 0 0 1 .13-2.2L4.4 2.8A2 2 0 0 1 6 2h12a2 2 0 0 1 1.6.8l1.6 2.14a2 2 0 0 1 .14 2.2L16.79 15'/%3E%3Cpath d='M11 12 5.5 1.2'/%3E%3Cpath d='m13 12 5.5-10.8'/%3E%3Cpath d='M12 22a7 7 0 1 0 0-14 7 7 0 0 0 0 14Z'/%3E%3Cpath d='M12 18a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z'/%3E%3C/svg%3E");
 }
-  
