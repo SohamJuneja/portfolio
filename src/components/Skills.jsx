@@ -15,7 +15,7 @@ const Skills = () => {
         { name: "CSS3", icon: "css3", level: 90, color: "#1572B6" },
         { name: "Bootstrap", icon: "bootstrap", level: 80, color: "#7952B3" },
         { name: "TailwindCSS", icon: "tailwindcss", level: 85, color: "#06B6D4" },
-        { name: "Shadcn", icon: "shadcn", level: 80, color: "#FFFFFF" },
+        { name: "Shadcn/UI", icon: "react", level: 80, color: "#FFFFFF" },
         { name: "JavaScript", icon: "javascript", level: 85, color: "#F7DF1E" },
         { name: "TypeScript", icon: "typescript", level: 80, color: "#3178C6" },
         { name: "React", icon: "react", level: 90, color: "#61DAFB" },
@@ -35,7 +35,7 @@ const Skills = () => {
       name: "Backend",
       skills: [
         { name: "Node.js", icon: "nodejs", level: 85, color: "#339933" },
-        { name: "Express.js", icon: "expressjs", level: 80, color: "#FFFFFF" },
+        { name: "Express.js", icon: "express", level: 80, color: "#FFFFFF" },
         { name: "GraphQL", icon: "graphql", level: 75, color: "#E10098" },
         { name: "Prisma", icon: "prisma", level: 70, color: "#2D3748" },
       ],
@@ -52,9 +52,9 @@ const Skills = () => {
       name: "Blockchain",
       skills: [
         { name: "Solidity", icon: "solidity", level: 75, color: "#00A8E8" },
-        { name: "Remix", icon: "remix", level: 80, color: "#F2DF1E" },
-        { name: "Hardhat", icon: "hardhat", level: 70, color: "#F7DF1E" },
-        { name: "Foundry", icon: "foundry", level: 65, color: "#F7DF1E" },
+        { name: "Remix IDE", icon: "solidity", level: 80, color: "#F2DF1E" },
+        { name: "Hardhat", icon: "nodejs", level: 70, color: "#339933" },
+        { name: "Foundry", icon: "bash", level: 65, color: "#4EAA25" },
       ],
     },
     {
@@ -62,7 +62,7 @@ const Skills = () => {
       skills: [
         { name: "Git", icon: "git", level: 90, color: "#F05032" },
         { name: "GitHub", icon: "github", level: 90, color: "#FFFFFF" },
-        { name: "GitPod", icon: "gitpod", level: 75, color: "#FFAE33" },
+        { name: "GitPod", icon: "git", level: 75, color: "#FFAE33" },
         { name: "Docker", icon: "docker", level: 75, color: "#2496ED" },
         { name: "Vercel", icon: "vercel", level: 80, color: "#FFFFFF" },
         { name: "Netlify", icon: "netlify", level: 80, color: "#00C7B7" },
@@ -70,7 +70,7 @@ const Skills = () => {
         { name: "Figma", icon: "figma", level: 75, color: "#F24E1E" },
         { name: "Canva", icon: "canva", level: 80, color: "#00C4CC" },
         { name: "LaTeX", icon: "latex", level: 65, color: "#008080" },
-        { name: "PowerShell", icon: "powershell", level: 60, color: "#5391FE" },
+        { name: "PowerShell", icon: "windows8", level: 60, color: "#5391FE" },
       ],
     },
   ]
@@ -78,23 +78,40 @@ const Skills = () => {
   const handleSkillClick = (skill) => {
     setSelectedSkill(selectedSkill === skill ? null : skill)
   }
-
   return (
     <div className="skills-container">
+      {/* Main Header */}
+      <motion.div 
+        className="netflix-header"
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+      >
+        <h1>MY ARSENAL</h1>
+        <p>The tools and technologies that power my development journey</p>
+      </motion.div>
 
       {categories.map((category, index) => (
-        <div className="category-row" key={index}>
+        <motion.div 
+          className="category-row" 
+          key={index}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: index * 0.1 }}
+        >
           <h2 className="category-title">{category.name}</h2>
           <div className="skills-row">
-            {category.skills.map((skill, skillIndex) => (
-              <motion.div
+            {category.skills.map((skill, skillIndex) => (              <motion.div
                 className="skill-card"
                 key={skillIndex}
                 whileHover={{
-                  scale: 1.1,
+                  scale: 1.08,
                   zIndex: 10,
                   transition: { duration: 0.3 },
                 }}
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: skillIndex * 0.05 }}
                 onClick={() => handleSkillClick(skill)}
               >
                 <div
@@ -103,12 +120,17 @@ const Skills = () => {
                     backgroundColor: skill === selectedSkill ? "rgba(20, 20, 20, 0.9)" : "#141414",
                     borderColor: skill === selectedSkill ? "#E50914" : skill.color,
                   }}
-                >
-                  <div 
+                >                  <div 
                     className="skill-icon" 
                     style={{ color: skill.color }}
                   >
-                    <i className={`devicon-${skill.icon}-plain`}></i>
+                    {skill.icon === 'express' ? (
+                      <span style={{ fontSize: '0.9em', fontWeight: 'bold' }}>EX</span>
+                    ) : skill.icon === 'bash' && skill.name === 'Foundry' ? (
+                      <span style={{ fontSize: '0.8em', fontWeight: 'bold' }}>FY</span>
+                    ) : (
+                      <i className={`devicon-${skill.icon}-plain`}></i>
+                    )}
                   </div>
                   <div className="skill-info">
                     <h3>{skill.name}</h3>
@@ -127,10 +149,9 @@ const Skills = () => {
                     )}
                   </div>
                 </div>
-              </motion.div>
-            ))}
+              </motion.div>            ))}
           </div>
-        </div>
+        </motion.div>
       ))}
     </div>
   )
