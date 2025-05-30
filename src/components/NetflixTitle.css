@@ -198,9 +198,11 @@
 /* Click instruction */
 .click-instruction {
   position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
+  bottom: 30px; /* Changed back from top: 50% */
+  left: 0; /* Changed */
+  right: 0; /* Added */
+  margin-left: auto; /* Added */
+  margin-right: auto; /* Added */
   color: #ffffff;
   font-size: clamp(16px, 4vw, 20px);
   font-family: 'Bebas Neue', Arial, sans-serif;
@@ -314,7 +316,7 @@
   
   .click-instruction {
     font-size: 16px;
-    bottom: 100px;
+    bottom: 60px; /* Adjusted for general smaller screens, was 100px, then removed */
   }
 }
 
@@ -325,11 +327,11 @@
   }
 
   .logo-container {
-    margin-bottom: 30px;
+    margin-bottom: 45px; /* Adjusted from 30px, then to 45px */
   }
   
   .click-instruction {
-    bottom: 2px;
+    bottom: 20px; /* Adjusted from 15px, was 2px, then removed */
     font-size: 16px;
   }
 }
