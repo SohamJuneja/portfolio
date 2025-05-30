@@ -1,0 +1,131 @@
+/* filepath: e:\portfolioSoham\netflix-portfolio\src\components\Blog.css */
+.blog-page-body {
+  background-color: #000000;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Changed from center */
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding: 100px 2rem 2rem 2rem; /* Adjusted padding, especially top */
+  position: relative;
+  overflow-x: hidden; /* To prevent horizontal scroll if any content overflows */
+  overflow-y: auto; /* Allow vertical scroll if content is too long */
+}
+
+.blog-background-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #000000 0%, #141414 50%, #000000 100%);
+  z-index: 1;
+}
+
+.blog-background-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(229, 9, 20, 0.1) 0%, transparent 70%);
+  z-index: 2;
+}
+
+.blog-main-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  max-width: 800px;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+.blog-title {
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 900;
+  margin-top: 2rem; /* Reduced from 100px */
+  margin-bottom: 2rem;
+  background: linear-gradient(135deg, #e50914 0%, #ff6b35 50%, #e5e5e5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-family: "Bebas Neue", Arial Black, sans-serif;
+  letter-spacing: 0.1em;
+  line-height: 1.1;
+  animation: fadeInUp 1s ease-out;
+}
+
+.blog-attribution {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #e5e5e5;
+  margin-bottom: 3rem;
+  font-style: italic;
+  opacity: 0.9;
+  animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+.blog-main-text {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: #cccccc; /* Changed from #b3b3b3 to #cccccc for a slightly brighter text */
+  line-height: 1.6;
+  margin-bottom: 3rem;
+  animation: fadeInUp 1s ease-out 0.4s both;
+  padding: 0 1rem;
+}
+
+.blog-gif-container {
+  display: inline-block;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4); /* Softened shadow */
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  animation: fadeInUp 1s ease-out 0.6s both;
+  width: 100%;
+  max-width: 400px;
+}
+
+.blog-gif-container:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.6); /* Adjusted hover shadow */
+  border-color: #e50914;
+}
+
+.blog-gif {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .blog-page-body {
+    padding-top: 80px; /* Adjusted for smaller screens */
+  }
+  /* .blog-title margin-top adjustment removed as body padding handles it */
+  .blog-main-text {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  /* .blog-title margin-top and margin-bottom adjustments removed or simplified */
+  .blog-title {
+    /* margin-top is handled by body padding, keep 2rem or adjust if needed */
+    margin-bottom: 1.5rem; /* Kept this specific adjustment */
+  }
+  .blog-main-text, .blog-attribution {
+    margin-bottom: 2rem;
+  }
+}
