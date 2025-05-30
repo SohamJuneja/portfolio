@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { ChevronDown, ChevronUp, Info, Play, Volume2, Heart, Share2 } from "lucide-react"
+import { ChevronDown, ChevronUp, Info, Play, Volume2, Heart, Share2, Pause } from "lucide-react"
 
 // Netflix-inspired styling directly in the component
 const netflixStyles = {
@@ -202,12 +202,12 @@ const netflixStyles = {
     cursor: "pointer",
   },
   cardExpanded: {
-    marginTop: "0.5rem",
-    padding: "0.5rem",
+    padding: "0.75rem",
     fontSize: "0.75rem",
-    backgroundColor: "rgba(0, 0, 0, 0.8)",
-    backdropFilter: "blur(4px)",
+    backgroundColor: "rgba(0, 0, 0, 0.9)", // Darker background
+    backdropFilter: "blur(5px)", // Slightly more blur
     borderRadius: "4px",
+    // Removed marginTop as it will be positioned absolutely
   },
   audioControls: {
     display: "flex",

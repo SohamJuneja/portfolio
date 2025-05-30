@@ -203,11 +203,10 @@ const netflixStyles = {
     cursor: "pointer",
   },
   cardExpanded: {
-    marginTop: "0.5rem",
-    padding: "0.5rem",
+    padding: "0.75rem",
     fontSize: "0.75rem",
-    backgroundColor: "rgba(0, 0, 0, 0.8)",
-    backdropFilter: "blur(4px)",
+    backgroundColor: "rgba(0, 0, 0, 0.9)", // Darker background
+    backdropFilter: "blur(5px)", // Slightly more blur
     borderRadius: "4px",
   },
 }
@@ -688,7 +687,7 @@ export default function CinemaContent() {
       title: "Sacred Games",
       year: "2018-2019",
       genre: "Crime",
-      image: "https://m.media-amazon.com/images/M/MV5BMjJlMjJlMzYtNmU5Yy00N2MwLWJmMjEtNWUwZWIyMGViZDgyXkEyXkFqcGdeQXVyOTAzMTc2MjA@._V1_.jpg"
+      image: "https://m.media-amazon.com/images/M/MV5BYjA4NzJlOGQtZmQzMy00Mjc0LWE2YzEtZjBlY2YyOGMwYmNkXkEyXkFqcGc@._V1_.jpg"
     },
     {
       id: "mirzapur",
@@ -716,7 +715,7 @@ export default function CinemaContent() {
       title: "Dark",
       year: "2017-2020",
       genre: "Sci-Fi",
-      image: "https://m.media-amazon.com/images/M/MV5BOTk2NzUyOTctZDdlMS00MDJlLTgzNTEtNzQzYjFhNjA0YjBjXkEyXkFqcGdeQXVyMjg1NDcxNDE@._V1_.jpg"
+      image: "https://m.media-amazon.com/images/M/MV5BOWJjMGViY2UtNTAzNS00ZGFjLWFkNTMtMDBiMDMyZTM1NTY3XkEyXkFqcGc@._V1_.jpg"
     },
     {
       id: "black-spot",
@@ -835,7 +834,7 @@ export default function CinemaContent() {
       title: "Special Ops",
       year: "2020-Present",
       genre: "Action",
-      image: "https://m.media-amazon.com/images/M/MV5BN2I0NWE2Y2QtM2I3YS00MzRlLThlMjAtMDViNGMwNjRhZjVlXkEyXkFqcGc@._V1_.jpg"
+      image: "https://m.media-amazon.com/images/M/MV5BN2E3OTI0OGItMWRhMi00NjU1LTk1ZTctMDEwOWZiMDczOWNlXkEyXkFqcGc@._V1_.jpg"
     },
     {
       id: "1899",
@@ -898,7 +897,7 @@ export default function CinemaContent() {
       title: "Attack on Titan",
       year: "2013-2023",
       genre: "Animation",
-      image: "https://m.media-amazon.com/images/M/MV5BNzc5MTczNDQtNDFjNi00ZDU5LWFkNzItOTE1NzQzMzdhNzMxXkEyXkFqcGdeQXVyNTgyNTA4MjM@._V1_.jpg"
+      image: "https://images.justwatch.com/poster/306747132/s718/attack-on-titan.jpg"
     },
     {
       id: "drive-to-survive",
