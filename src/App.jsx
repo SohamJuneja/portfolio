@@ -47,13 +47,13 @@ function AppRoutes() {
 
 export default function App() {
   return (
-    <HelmetProvider>
-      <SEO />
-      <Router>
+    <Router>
+      <HelmetProvider>
+        <SEO />
         <AppRoutes />
         <Analytics />
         <SpeedInsights />
-      </Router>
-    </HelmetProvider>
+      </HelmetProvider>
+    </Router>
   )
 }
