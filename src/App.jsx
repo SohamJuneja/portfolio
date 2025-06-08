@@ -3,6 +3,8 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom"
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/react"
+import { HelmetProvider } from 'react-helmet-async'
+import SEO from './components/SEO'
 import NetflixTitle from "./components/NetflixTitle"
 import Browse from "./components/Browse"
 import Navbar from "./components/Navbar"
@@ -45,10 +47,13 @@ function AppRoutes() {
 
 export default function App() {
   return (
-    <Router>
-      <AppRoutes />
-      <Analytics />
-      <SpeedInsights />
-    </Router>
+    <HelmetProvider>
+      <SEO />
+      <Router>
+        <AppRoutes />
+        <Analytics />
+        <SpeedInsights />
+      </Router>
+    </HelmetProvider>
   )
 }
