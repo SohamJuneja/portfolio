@@ -10,11 +10,11 @@ const SEO = () => {
       description: "Soham Juneja's professional portfolio showcasing web development projects, skills, and experience.",
       keywords: "Soham Juneja, Web Developer, Portfolio, React Developer, Frontend Developer",
       'og:type': 'website',
-      'og:url': 'https://sohamjuneja.in/',
+      'og:url': 'https://www.sohamjuneja.in/',
       'og:title': 'Soham Juneja - Portfolio',
       'og:description': "Soham Juneja's professional portfolio showcasing web development projects, skills, and experience.",
       'twitter:card': 'summary_large_image',
-      'twitter:url': 'https://sohamjuneja.in/',
+      'twitter:url': 'https://www.sohamjuneja.in/',
       'twitter:title': 'Soham Juneja - Portfolio',
       'twitter:description': "Soham Juneja's professional portfolio showcasing web development projects, skills, and experience."
     };
@@ -43,7 +43,7 @@ const SEO = () => {
       canonical.setAttribute('rel', 'canonical');
       document.head.appendChild(canonical);
     }
-    canonical.setAttribute('href', 'https://sohamjuneja.in/');
+    canonical.setAttribute('href', 'https://www.sohamjuneja.in/');
 
   }, []); // Empty dependency array means this runs once on mount
 
