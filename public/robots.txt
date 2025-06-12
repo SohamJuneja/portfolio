@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sohamjuneja.in/sitemap.xml 
+Sitemap: https://www.sohamjuneja.in/sitemap.xml
