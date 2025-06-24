@@ -1,7 +1,8 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { ChevronDown, ChevronUp, Info, Play } from "lucide-react"
+import { ChevronDown, ChevronUp, Info, Play, Stop } from "lucide-react"
+import PlayButton from './PlayButton'
 
 // Netflix-inspired styling directly in the component
 const netflixStyles = {
@@ -271,6 +272,8 @@ export default function CinemaContent() {
   const [hoveredCard, setHoveredCard] = useState(null)
   const [responsiveStyles, setResponsiveStyles] = useState(getResponsiveStyles())
   const [scrolled, setScrolled] = useState(false)
+  const [playingCardId, setPlayingCardId] = useState(null)
+  const [bannerPlaying, setBannerPlaying] = useState(false)
 
   // Update responsive styles on window resize
   useEffect(() => {
@@ -306,7 +309,8 @@ export default function CinemaContent() {
       title: "Shutter Island",
       year: 2010,
       genre: "Thriller",
-      image: "https://m.media-amazon.com/images/M/MV5BYzhiNDkyNzktNTZmYS00ZTBkLTk2MDAtM2U0YjU1MzgxZjgzXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg"
+      image: "https://m.media-amazon.com/images/M/MV5BYzhiNDkyNzktNTZmYS00ZTBkLTk2MDAtM2U0YjU1MzgxZjgzXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg",
+      youtubeId: "XkUwpoXr85M"
     },
     {
       id: "memento",
@@ -680,7 +684,8 @@ export default function CinemaContent() {
       title: "Stranger Things",
       year: "2016-Present",
       genre: "Sci-Fi",
-      image: "https://m.media-amazon.com/images/M/MV5BMDZkYmVhNjMtNWU4MC00MDQxLWE3MjYtZGMzZWI1ZjhlOWJmXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg"
+      image: "https://m.media-amazon.com/images/M/MV5BMDZkYmVhNjMtNWU4MC00MDQxLWE3MjYtZGMzZWI1ZjhlOWJmXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg",
+      youtubeId: "b9EkMc79ZSU"
     },
     {
       id: "sacred-games",
@@ -876,7 +881,8 @@ export default function CinemaContent() {
       title: "Game of Thrones",
       year: "2011-2019",
       genre: "Fantasy",
-      image: "https://m.media-amazon.com/images/M/MV5BN2IzYzBiOTQtNGZmMi00NDI5LTgxMzMtN2EzZjA1NjhlOGMxXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_.jpg"
+      image: "https://hips.hearstapps.com/hmg-prod/images/hbz-got-poster-aftermath-1554224896.jpg?crop=1.00xw:0.693xh;0,0.0577xh&resize=640:*",
+      youtubeId: "VrJYq2exNAs"
     },
     {
       id: "railway-men",
@@ -925,19 +931,23 @@ export default function CinemaContent() {
 
   const getFeaturedContent = () => {
     if (activeCategory === "movies") {
+      const movie = movies.find(m => m.id === "shutter-island");
       return {
         title: "Shutter Island",
         description: "Which would be worse - to live as a monster, or to die as a good man?",
-        image: "https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F9a33dd8f-a0b9-40f3-9567-c620019b87c0_1024x435.jpeg"
-      }
+        image: "https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F9a33dd8f-a0b9-40f3-9567-c620019b87c0_1024x435.jpeg",
+        youtubeId: movie?.youtubeId
+      };
     } else {
+      const serie = series.find(s => s.id === "got");
       return {
         title: "Game of Thrones",
         description: "Can a man still be brave if he's afraid?<br />That is the only time a man can be brave.",
-        image: "https://images6.alphacoders.com/918/918844.jpg"
-      }
+        image: "https://images3.alphacoders.com/710/710804.jpg",
+        youtubeId: serie?.youtubeId
+      };
     }
-  }
+  };
 
   const featured = getFeaturedContent()
 
@@ -954,20 +964,74 @@ export default function CinemaContent() {
         <div style={netflixStyles.featuredGradientSide}></div>
 
         <div style={netflixStyles.featuredImage}>
-          <img 
-            src={featured.image || "/placeholder.svg"} 
-            alt={featured.title} 
-            style={netflixStyles.featuredImg}
-            loading="lazy"
-          />
+          {bannerPlaying && featured.youtubeId ? (
+            <div style={{ position: 'relative', width: '100%', height: '100%' }}>
+              <div
+                onClick={() => setBannerPlaying(false)}
+                style={{
+                  position: 'absolute',
+                  inset: 0,
+                  zIndex: 2,
+                  cursor: 'pointer',
+                }}
+              />
+              <iframe
+                width="100%"
+                height="100%"
+                src={`https://www.youtube.com/embed/${featured.youtubeId}?autoplay=1&rel=0&modestbranding=1`}
+                title={featured.title}
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                style={{ position: 'relative', zIndex: 1 }}
+              ></iframe>
+              <button
+                onClick={() => setBannerPlaying(false)}
+                style={{
+                  position: 'absolute',
+                  top: 8,
+                  right: 8,
+                  background: 'rgba(0,0,0,0.7)',
+                  border: 'none',
+                  borderRadius: '50%',
+                  width: 32,
+                  height: 32,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  cursor: 'pointer',
+                  zIndex: 3
+                }}
+                title="Close"
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+              </button>
+            </div>
+          ) : (
+            <div style={{ position: 'relative', width: '100%', height: '100%' }}>
+              <img
+                src={featured.image || "/placeholder.svg"}
+                alt={featured.title}
+                style={netflixStyles.featuredImg}
+                loading="lazy"
+              />
+            </div>
+          )}
         </div>
 
         <div style={mergeStyles(netflixStyles.featuredContent, "featuredContent")}>
           <h2 style={mergeStyles(netflixStyles.featuredTitle, "featuredTitle")}>{featured.title}</h2>
           <p style={netflixStyles.featuredDescription} dangerouslySetInnerHTML={{ __html: featured.description }}></p>
-          <div style={netflixStyles.featuredButtons}>
-            
-          </div>
+          {featured.youtubeId && (
+            <div style={{ marginTop: '1.5rem' }}>
+              <PlayButton 
+                onClick={() => setBannerPlaying(!bannerPlaying)} 
+                label={bannerPlaying ? 'Stop' : 'Play'}
+                icon={bannerPlaying ? <Stop size={24} color="black" /> : undefined}
+              />
+            </div>
+          )}
+          <div style={netflixStyles.featuredButtons}></div>
         </div>
       </section>
 
@@ -1012,12 +1076,14 @@ export default function CinemaContent() {
               onMouseEnter={() => setHoveredCard(item.id)}
               onMouseLeave={() => setHoveredCard(null)}
             >
-              <img
-                src={item.image}
-                alt={item.title}
-                style={netflixStyles.cardImg}
-                loading="lazy"
-              />
+              <div style={{ position: 'relative', width: '100%', height: '100%' }}>
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  style={netflixStyles.cardImg}
+                  loading="lazy"
+                />
+              </div>
 
               <div
                 style={{
