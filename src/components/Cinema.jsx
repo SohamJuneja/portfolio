@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { ChevronDown, ChevronUp, Info, Play, Stop } from "lucide-react"
+import { ChevronDown, ChevronUp, Info, Play, Pause, StopCircle  } from "lucide-react"
 import PlayButton from './PlayButton'
 
 // Netflix-inspired styling directly in the component
@@ -1027,7 +1027,7 @@ export default function CinemaContent() {
               <PlayButton 
                 onClick={() => setBannerPlaying(!bannerPlaying)} 
                 label={bannerPlaying ? 'Stop' : 'Play'}
-                icon={bannerPlaying ? <Stop size={24} color="black" /> : undefined}
+                icon={bannerPlaying ? <StopCircle size={24} color="black" /> : undefined}
               />
             </div>
           )}
