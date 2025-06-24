@@ -512,9 +512,20 @@ body {
   transform: translateY(30px);
   animation: fadeInUp 1s ease-out forwards;
 }
-
 /* Mobile Responsive */
 @media (max-width: 768px) {
+  .hero-carousel {
+    margin-bottom: 1rem;
+  }
+  
+  .experience-content-container {
+    padding: 2rem 1rem;
+  }
+  
+  .timeline-header {
+    margin-bottom: 2rem;
+  }
+  
   .section-title {
     font-size: 2.5rem;
   }
@@ -614,6 +625,18 @@ body {
 }
 
 @media (max-width: 480px) {
+  .hero-carousel {
+    margin-bottom: 0.5rem;
+  }
+  
+  .experience-content-container {
+    padding: 1rem 1rem;
+  }
+  
+  .timeline-header {
+    margin-bottom: 1.5rem;
+  }
+  
   .section-title {
     font-size: 2rem;
   }

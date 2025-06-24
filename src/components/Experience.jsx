@@ -5,7 +5,7 @@ const experienceImages = [
   {
     src: "/webpimages/dscWorkshop.webp",
     alt: "GDSC Workshop",
-    title: "GDSC Open Source Workshop",
+    title: "Open Source Workshop",
   },
   {
     src: "/webpimages/anchoring.webp",
