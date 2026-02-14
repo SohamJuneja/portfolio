@@ -38,50 +38,93 @@ const experiences = [
   {
     id: 1,
     role: "Open Source Contributor",
-    company: "Jenkins",
-    period: "Nov 2024 - Present",
+    company: "Nullshot — Jenkins Remote",
+    period: "Nov 2024 – Present",
     type: "Open Source",
-    description: "Created around 15 PRs and active member in meets & office hours",
+    bullets: [
+      "Nullshot (AI Agent): Core developer for TaskMind, an autonomous agent. Integrated PostHog for granular event tracking & optimized NLP pipelines, boosting command recognition by 30%.",
+      "Jenkins (CI/CD): Authored 15+ merged PRs optimizing Jelly UI files & legacy Java codebases. Contributed to high-priority UI/UX revamps for Jenkins Stories, improving the developer experience for thousands of users.",
+      "Mentorship: Conducted an open-source seminar for 200+ students; maintained repositories with 40+ 'good first issues' to facilitate community growth."
+    ],
     color: "#e50914",
     icon: "🚀"
   },
   {
     id: 2,
-    role: "Executive",
-    company: "Society for Promotion of Electronics Culture, NIT Hamirpur",
-    period: "Aug 2024 – Present",
-    type: "Leadership",
-    description: "Spearheaded website updates for 5000+ users, led 35-member team for workshops, organized Electrothon 7.0 with 1500+ registrations",
-    color: "#00d4aa",
-    icon: "⚡"
-  },
-  {
-    id: 3,
-    role: "Executive",
-    company: "Google Developer Student Clubs",
-    period: "Jan 2024 – Present",
+    role: "Campus Lead",
+    company: "Google Developer Groups (GDG) NIT Hamirpur",
+    period: "May 2025 – Present",
     type: "Development",
-    description: "Developed 'Among Us' app with 300+ participants, built BittuAI platform leveraging generative AI . Took various workshops and organised various events",
+    bullets: [
+      "Organized flagship technical events including 'Genesis,' driving 150,000+ interactions on social platforms.",
+      "Led the club to win 'Best Technical Club' at Nimbus 2025 through consistent delivery of high-quality workshops."
+    ],
     color: "#ff6b35",
     icon: "💻"
   },
   {
+    id: 3,
+    role: "Lead Organizer",
+    company: "Society for Promotion of Electronics Culture (SPEC)",
+    period: "May 2025 – Present",
+    type: "Leadership",
+    bullets: [
+      "Electrothon 8.0: Leading India's largest MLH-backed hackathon. Scaled prize pool 12x from $1,600 to $20,000, increased attendance capacity by 50%, and drove registrations to an estimated 5,000+.",
+      "Operations & Growth: Secured major corporate sponsorships and managed logistics for 2,200+ participants in Electrothon 7.0.",
+      "Spearheaded the revamp of the SPEC website, improving load times and UX for 5,000+ unique visitors."
+    ],
+    color: "#00d4aa",
+    icon: "⚡"
+  },
+  {
     id: 4,
+    role: "Executive",
+    company: "Google Developer Student Clubs",
+    period: "Jan 2024 – May 2025",
+    type: "Development",
+    bullets: [
+      "Developed 'Among Us' app with 300+ participants.",
+      "Built BittuAI platform leveraging generative AI.",
+      "Took various workshops and organised various events."
+    ],
+    color: "#ff6b35",
+    icon: "💻"
+  },
+  {
+    id: 5,
+    role: "Executive",
+    company: "Society for Promotion of Electronics Culture, NIT Hamirpur",
+    period: "Aug 2024 – May 2025",
+    type: "Leadership",
+    bullets: [
+      "Spearheaded website updates for 5,000+ users.",
+      "Led 35-member team for workshops.",
+      "Organized Electrothon 7.0 with 1,500+ registrations."
+    ],
+    color: "#00d4aa",
+    icon: "⚡"
+  },
+  {
+    id: 6,
     role: "Volunteer",
     company: "E-Cell, NIT Hamirpur",
     period: "Dec 2023 – Apr 2024",
     type: "Operations",
-    description: "Led financial operations and secured sponsorships for E-Cell events",
+    bullets: [
+      "Led financial operations and secured sponsorships for E-Cell events."
+    ],
     color: "#4ecdc4",
     icon: "💼"
   },
   {
-    id: 5,
+    id: 7,
     role: "Subject Matter Expert",
     company: "Chegg",
     period: "Nov 2023 – Present",
     type: "Education",
-    description: "Resolved academic queries with 4.63/5 quality score and 70% positive feedback",
+    bullets: [
+      "Resolved academic queries with 4.63/5 quality score and 70% positive feedback."
+    ],
     color: "#ffe66d",
     icon: "📚"
   }
@@ -256,7 +299,11 @@ const Experience = () => {
                 <h3 className="experience-role">{exp.role}</h3>
                 <h4 className="experience-company">{exp.company}</h4>
                 <div className="experience-period">{exp.period}</div>
-                <p className="experience-description">{exp.description}</p>
+                <ul className="experience-bullets">
+                  {exp.bullets.map((bullet, i) => (
+                    <li key={i}>{bullet}</li>
+                  ))}
+                </ul>
               </div>
             </div>
           ))}

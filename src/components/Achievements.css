@@ -243,6 +243,14 @@ body {
     box-shadow: 0 0 15px rgba(229, 9, 20, 0.4); /* Glow for the underline */
 }
 
+.achievements-subtitle {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 1.6rem;
+    color: #e50914;
+    letter-spacing: 3px;
+    margin-top: 18px;
+    text-shadow: 0 0 20px rgba(229, 9, 20, 0.5);
+}
 
 .achievements-grid {
     display: grid;

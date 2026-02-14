@@ -494,6 +494,33 @@ body {
   margin-bottom: 0;
 }
 
+.experience-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.experience-bullets li {
+  position: relative;
+  padding-left: 16px;
+  font-size: 0.9rem;
+  color: var(--netflix-medium-gray);
+  line-height: 1.6;
+  margin-bottom: 6px;
+}
+
+.experience-bullets li:last-child {
+  margin-bottom: 0;
+}
+
+.experience-bullets li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--color, #e50914);
+  font-size: 0.85rem;
+}
+
 /* Animations */
 @keyframes fadeInUp {
   from {
@@ -687,6 +714,10 @@ body {
   }
   
   .experience-description {
+    font-size: 0.85rem;
+  }
+
+  .experience-bullets li {
     font-size: 0.85rem;
   }
 
