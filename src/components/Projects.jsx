@@ -86,7 +86,8 @@ const Projects = () => {  const getTechIcon = (tech) => {
       id: 6,
       title: "AI Meeting Agent",
       description: "Intelligent meeting assistant that transcribes, summarizes, and generates actionable insights from meetings.",
-      image: "/webpimages/placeholder.svg",
+      image: "/images/meetingAgent.png",
+      github: "https://github.com/SohamJuneja/meeting-agent",
       tags: ["Python", "React", "Node.js", "TensorFlow"],
       year: 2025,
     },
@@ -209,7 +210,11 @@ const Projects = () => {  const getTechIcon = (tech) => {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.3 }}
       >
-        {projects.map((project) => (          <motion.div
+        {projects.map((project) => {
+          const CardWrapper = project.github ? 'a' : 'div';
+          const cardProps = project.github ? { href: project.github, target: "_blank", rel: "noopener noreferrer" } : {};
+          return (
+          <motion.div
             className="project-card"
             key={project.id}
             initial={{ opacity: 0, y: 30 }}
@@ -220,9 +225,12 @@ const Projects = () => {  const getTechIcon = (tech) => {
               transition: { duration: 0.3 }
             }}
           >
+            <CardWrapper {...cardProps} className="project-card-link">
             <div className="project-poster">
               <img src={project.image} alt={project.title} />
-              <div className="project-overlay"></div>
+              <div className="project-overlay">
+                {project.github && <FaGithub className="overlay-github-icon" />}
+              </div>
             </div>
 
             <div className="project-info">
@@ -236,13 +244,11 @@ const Projects = () => {  const getTechIcon = (tech) => {
                   </span>
                 ))}
               </div>
-              {project.github && (
-                <a href={project.github} target="_blank" rel="noopener noreferrer" className="project-github-link">
-                  <FaGithub /> View Source
-                </a>
-              )}
             </div>
-          </motion.div>        ))}
+            </CardWrapper>
+          </motion.div>
+          );
+        })}
       </motion.div>
     </div>
   )
