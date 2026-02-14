@@ -157,7 +157,7 @@ const Experience = () => {
           setIsVisible(true);
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.05 }
     );
 
     if (timelineRef.current) {
